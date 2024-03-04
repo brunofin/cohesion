@@ -1,7 +1,7 @@
-import { app } from 'electron';
+import {app, BrowserWindow} from 'electron';
 import Notion from './notion';
 
-let mainWindow;
+let mainWindow: BrowserWindow;
 
 
 if (process.defaultApp) {
@@ -24,5 +24,11 @@ if (!app.requestSingleInstanceLock()) {
         }
     })
     
-    app.whenReady().then(() => mainWindow = new Notion().init());
+    app.whenReady().then(() => {
+        mainWindow = new Notion().init()
+ 
+        app.on('open-url', (event, url) => {
+            mainWindow.loadURL(url);
+        })
+    });
 }

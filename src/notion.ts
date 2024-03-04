@@ -38,7 +38,7 @@ export default class Notion {
         ]);
     }
 
-    public init() {
+    public init(): BrowserWindow {
         this.makeLinksOpenInBrowser();
         this.registerListeners();
 
