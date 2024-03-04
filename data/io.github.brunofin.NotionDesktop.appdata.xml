@@ -2,12 +2,15 @@
 <component type="desktop">
   <id>io.github.brunofin.NotionDesktop</id>
   <name>Notion Desktop</name>
-  <summary>Unofficial Notion Web Desktop client.</summary>
+  <summary>Unofficial Notion Desktop client</summary>
+  
+  <launchable type="desktop-id">io.github.brunofin.NotionDesktop.desktop</launchable>
 
   <metadata_license>FSFAP</metadata_license>
   <project_license>MIT</project_license>
 
   <description>
+    <p>An Electron wrapper around Notion</>
     <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Notion Inc.</p>
   </description>
 
@@ -28,6 +31,7 @@
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/brunofin/notion-desktop-linux/main/data/screenshots/screenshot-1.png</image>
+      <caption>Login screen</caption>
     </screenshot>
   </screenshots>
 
