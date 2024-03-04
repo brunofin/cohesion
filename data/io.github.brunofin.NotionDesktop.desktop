@@ -5,5 +5,5 @@ Exec=notion-desktop-linux
 Type=Application
 Icon=io.github.brunofin.NotionDesktop
 Comment=An unofficial Notion client for Linux, built with Electron.
-Categories=Utility;Network;Productivity;Development;
+Categories=Office;Development;
 StartupWMClass=notion-desktop-linux
