@@ -12,7 +12,7 @@ export function findIcon(name: string) {
 }
 
 export function getUnreadMessages(title: string) {
-    const matches = title.match(/\(\d+\) WhatsApp/);
+    const matches = title.match(/\(\d+\)/);
     return matches == null ? 0 : Number.parseInt(matches[0].match(/\d+/)[0]);
 }
 

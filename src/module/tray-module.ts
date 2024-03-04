@@ -1,17 +1,17 @@
 import { BrowserWindow, Menu, MenuItem, Tray } from "electron";
 import { findIcon, getUnreadMessages } from "../util";
-import WhatsApp from "../whatsapp";
+import Notion from "../notion";
 import Module from "./module";
 
-const ICON = findIcon("io.github.mimbrero.WhatsAppDesktop.png");
-const ICON_UNREAD = findIcon("io.github.mimbrero.WhatsAppDesktop-unread.png");
+const ICON = findIcon("io.github.brunofin.NotionDesktop.png");
+const ICON_UNREAD = findIcon("io.github.brunofin.NotionDesktop-unread.png");
 
 export default class TrayModule extends Module {
 
     private readonly tray: Tray;
 
     constructor(
-        private readonly whatsApp: WhatsApp,
+        private readonly whatsApp: Notion,
         private readonly window: BrowserWindow
     ) {
         super();
@@ -26,26 +26,26 @@ export default class TrayModule extends Module {
     private updateMenu(unread: number = getUnreadMessages(this.window.title)) {
         const menu = Menu.buildFromTemplate([
             {
-                label: this.window.isVisible() ? "Minimize to tray" : "Show WhatsApp",
+                label: this.window.isVisible() ? "Minimize to tray" : "Show Notion",
                 click: () => this.onClickFirstItem()
             },
             {
-                label: "Quit WhatsApp",
+                label: "Quit Notion",
                 click: () => this.whatsApp.quit()
             }
         ]);
 
-        let tooltip = "WhatsApp Desktop";
+        let tooltip = "Notion";
 
         if (unread != 0) {
             menu.insert(0, new MenuItem({
-                label: unread + " unread chats",
+                label: unread + " unread notifications",
                 enabled: false
             }));
 
             menu.insert(1, new MenuItem({ type: "separator" }));
 
-            tooltip = tooltip + " - " + unread + " unread chats";
+            tooltip = tooltip + " - " + unread + " unread notifications";
         }
 
         this.tray.setContextMenu(menu);

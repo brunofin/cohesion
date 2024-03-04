@@ -1,5 +1,5 @@
 import { BrowserWindow, Event, Input } from "electron";
-import WhatsApp from "../whatsapp";
+import Notion from "../notion";
 import Module from "./module";
 
 interface ClickAction {
@@ -13,7 +13,7 @@ export default class HotkeyModule extends Module {
     private readonly actions = new Array<ClickAction>();
 
     constructor(
-        private readonly whatsApp: WhatsApp,
+        private readonly whatsApp: Notion,
         private readonly window: BrowserWindow
     ) {
         super();

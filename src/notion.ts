@@ -9,7 +9,7 @@ import WindowSettingsModule from "./module/window-settings-module";
 
 const USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.9999.0 Safari/537.36";
 
-export default class WhatsApp {
+export default class Notion {
 
     private readonly window: BrowserWindow;
     private readonly moduleManager: ModuleManager;
@@ -17,7 +17,7 @@ export default class WhatsApp {
 
     constructor() {
         this.window = new BrowserWindow({
-            title: "WhatsApp",
+            title: "Notion",
             width: 1100,
             height: 700,
             minWidth: 650,
@@ -45,7 +45,7 @@ export default class WhatsApp {
         this.moduleManager.beforeLoad();
 
         this.window.setMenu(null);
-        this.window.loadURL('https://web.whatsapp.com/', { userAgent: USER_AGENT });
+        this.window.loadURL('https://notion.so/login', { userAgent: USER_AGENT });
 
         this.moduleManager.onLoad();
     }

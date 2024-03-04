@@ -1,7 +1,7 @@
 {
-  "name": "whatsapp-desktop-linux",
+  "name": "notion-desktop-linux",
   "version": "1.2.3-2",
-  "description": "WhatsApp Desktop for Linux (unofficial)",
+  "description": "Notion Desktop for Linux (unofficial)",
   "main": "dist/index.js",
   "scripts": {
     "dist": "tsc",
@@ -10,7 +10,7 @@
     "start": "npm run dist && electron .",
     "build": "npm run dist && electron-builder"
   },
-  "author": "Alberto Mimbrero",
+  "author": "Bruno Finger",
   "license": "MIT",
   "dependencies": {
     "electron-store": "^8.1.0"
@@ -21,7 +21,7 @@
     "typescript": "^4.8.4"
   },
   "build": {
-    "appId": "io.github.mimbrero.WhatsAppDesktop",
+    "appId": "io.github.brunofin.NotionDesktop",
     "directories": {
       "output": "./build"
     },

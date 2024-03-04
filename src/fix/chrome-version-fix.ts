@@ -1,10 +1,10 @@
 import { ipcMain } from "electron";
-import WhatsApp from "../whatsapp";
+import Notion from "../notion";
 import Fix from "./fix";
 
 export default class ChromeVersionFix extends Fix {
 
-    constructor(private readonly whatsApp: WhatsApp) {
+    constructor(private readonly whatsApp: Notion) {
         super();
     }
 
