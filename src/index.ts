@@ -6,6 +6,7 @@ let preloadUrl: string;
 
 app.on('open-url', (event, url) => {
     preloadUrl = url;
+    dialog.showErrorBox('title2', preloadUrl);
 })
 
 if (process.defaultApp) {
@@ -23,7 +24,7 @@ if (!app.requestSingleInstanceLock()) {
     app.on('second-instance', (event, commandLine, workingDirectory) => {
         // Someone tried to run a second instance, we should focus our window.
         if (mainWindow) {
-            dialog.showErrorBox('title', commandLine.pop().slice(0, -1));
+            dialog.showErrorBox('title', commandLine.join(' '));
             mainWindow.loadURL(commandLine.pop().slice(0, -1));
             
             if (mainWindow.isMinimized()) mainWindow.restore()
@@ -33,6 +34,6 @@ if (!app.requestSingleInstanceLock()) {
     
     app.whenReady().then(() => {
         mainWindow = new Notion().init(preloadUrl)
-        dialog.showErrorBox('title', preloadUrl);
+        dialog.showErrorBox('title1', preloadUrl);
     });
 }
