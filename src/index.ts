@@ -11,7 +11,7 @@ app.on('open-url', (event, url) => {
 
 if (process.defaultApp) {
     if (process.argv.length >= 2) {
-        app.setAsDefaultProtocolClient('notion', process.execPath, [process.argv[1]]);
+        app.setAsDefaultProtocolClient('notion', process.execPath, process.argv);
     }
 } else {
     app.setAsDefaultProtocolClient('notion');
