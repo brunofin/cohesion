@@ -7,3 +7,4 @@ Icon=io.github.brunofin.NotionDesktop
 Comment=An unofficial Notion client for Linux, built with Electron.
 Categories=Office;Development;
 StartupWMClass=notion-desktop-linux
+MimeType=x-scheme-handler/notion;

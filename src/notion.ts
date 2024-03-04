@@ -48,6 +48,8 @@ export default class Notion {
         this.window.loadURL('https://notion.so/login', { userAgent: USER_AGENT });
 
         this.moduleManager.onLoad();
+        
+        return this.window;
     }
 
     public reload() {
