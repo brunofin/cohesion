@@ -14,10 +14,6 @@
   <url type="bugtracker">https://github.com/brunofin/notion-desktop-linux/issues</url>
   <url type="homepage">https://github.com/brunofin/notion-desktop-linux</url>
 
-  <requires>
-    <display_length compare="ge">medium</display_length>
-  </requires>
-
   <recommends>
     <control>keyboard</control>
     <control>pointing</control>
