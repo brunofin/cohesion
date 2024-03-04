@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>io.github.brunofin.NotionDesktop</id>
+  <name>Notion Desktop</name>
+  <summary>Unofficial Notion Web Desktop client.</summary>
+
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>MIT</project_license>
+
+  <description>
+    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Notion Inc.</p>
+  </description>
+
+  <url type="bugtracker">https://github.com/brunofin/notion-desktop-linux/issues</url>
+  <url type="homepage">https://github.com/brunofin/notion-desktop-linux</url>
+
+  <requires>
+    <display_length compare="ge">medium</display_length>
+  </requires>
+
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-info">intense</content_attribute>
+    <content_attribute id="social-audio">intense</content_attribute>
+    <content_attribute id="social-contacts">intense</content_attribute>
+  </content_rating>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/brunofin/notion-desktop-linux/main/data/screenshots/screenshot-1.png</image>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="1.0" date="2024-03-04" />
+  </releases>
+
+  <developer_name>Bruno Finger</developer_name>
+  <update_contact>bruno.k.finger_at_gmail.com</update_contact>
+</component>

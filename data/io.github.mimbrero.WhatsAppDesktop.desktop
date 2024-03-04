@@ -1,9 +1,0 @@
-[Desktop Entry]
-
-Name=WhatsApp Desktop
-Exec=whatsapp-desktop-linux
-Type=Application
-Icon=io.github.mimbrero.WhatsAppDesktop
-Comment=An unofficial WhatsApp client for Linux, built with Electron.
-Categories=Utility;Network;Chat;InstantMessaging;
-StartupWMClass=whatsapp-desktop-linux

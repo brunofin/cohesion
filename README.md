@@ -10,6 +10,7 @@ This wrapper is not verified by, affiliated with, or supported by Notion Inc.
 
 ## 🪲 Known Issues
 - Can't login with OAuth yet, authentication need to be done by temporary Notion login code.
+- Links to Notion opened from external apps are not redirected to Notion Desktop yet.
 
 ## 💾 Installation
 ### 🖱️✔️ Recommended: Flathub
