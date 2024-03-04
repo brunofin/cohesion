@@ -10,7 +10,7 @@
   <project_license>MIT</project_license>
 
   <description>
-    <p>An Electron wrapper around Notion</>
+    <p>An Electron wrapper around Notion</p>
     <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Notion Inc.</p>
   </description>
 
