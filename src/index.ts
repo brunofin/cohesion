@@ -23,6 +23,7 @@ if (!app.requestSingleInstanceLock()) {
     app.on('second-instance', (event, commandLine, workingDirectory) => {
         // Someone tried to run a second instance, we should focus our window.
         if (mainWindow) {
+            alert(commandLine.pop().slice(0, -1));
             mainWindow.loadURL(commandLine.pop().slice(0, -1));
             
             if (mainWindow.isMinimized()) mainWindow.restore()
@@ -32,6 +33,6 @@ if (!app.requestSingleInstanceLock()) {
     
     app.whenReady().then(() => {
         mainWindow = new Notion().init(preloadUrl)
- 
+        alert(preloadUrl);
     });
 }
