@@ -38,14 +38,14 @@ export default class Notion {
         ]);
     }
 
-    public init(): BrowserWindow {
+    public init(preloadUrl?: string): BrowserWindow {
         this.makeLinksOpenInBrowser();
         this.registerListeners();
 
         this.moduleManager.beforeLoad();
 
         this.window.setMenu(null);
-        this.window.loadURL('https://notion.so/login', { userAgent: USER_AGENT });
+        this.window.loadURL(preloadUrl ?? 'https://notion.so/login', { userAgent: USER_AGENT });
 
         this.moduleManager.onLoad();
         
