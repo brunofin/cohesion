@@ -1,5 +1,5 @@
 import { BrowserWindow, Event, Input } from "electron";
-import Notion from "../notion";
+import Cohesion from "../cohesion";
 import Module from "./module";
 
 interface ClickAction {
@@ -13,7 +13,7 @@ export default class HotkeyModule extends Module {
     private readonly actions = new Array<ClickAction>();
 
     constructor(
-        private readonly whatsApp: Notion,
+        private readonly cohesion: Cohesion,
         private readonly window: BrowserWindow
     ) {
         super();
@@ -62,12 +62,12 @@ export default class HotkeyModule extends Module {
             },
             {
                 keys: ["F5"],
-                action: () => this.whatsApp.reload()
+                action: () => this.cohesion.reload()
             },
             {
                 control: true,
                 keys: ["R"],
-                action: () => this.whatsApp.reload()
+                action: () => this.cohesion.reload()
             },
             {
                 control: true,
@@ -77,7 +77,7 @@ export default class HotkeyModule extends Module {
             {
                 control: true,
                 keys: ["Q"],
-                action: () => this.whatsApp.quit()
+                action: () => this.cohesion.quit()
             }
         );
     }

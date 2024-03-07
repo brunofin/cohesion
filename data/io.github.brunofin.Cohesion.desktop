@@ -1,10 +1,10 @@
 [Desktop Entry]
 
-Name=Notion Desktop
-Exec=notion-desktop-linux
+Name=Cohesion
+Exec=cohesion
 Type=Application
-Icon=io.github.brunofin.NotionDesktop
+Icon=io.github.brunofin.Cohesion
 Comment=An unofficial Notion client for Linux, built with Electron.
 Categories=Office;Development;
-StartupWMClass=notion-desktop-linux
+StartupWMClass=cohesion
 MimeType=x-scheme-handler/notion;

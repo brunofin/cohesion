@@ -1,12 +1,12 @@
 import {app, BrowserWindow, dialog} from 'electron';
-import Notion from './notion';
+import Cohesion from './cohesion';
 
 let mainWindow: BrowserWindow;
 let preloadUrl: string;
 
 app.on('open-url', (event, url) => {
     preloadUrl = url;
-    dialog.showErrorBox('title2', preloadUrl);
+    // dialog.showErrorBox('title2', preloadUrl);
 })
 
 if (process.defaultApp) {
@@ -24,7 +24,7 @@ if (!app.requestSingleInstanceLock()) {
     app.on('second-instance', (event, commandLine, workingDirectory) => {
         // Someone tried to run a second instance, we should focus our window.
         if (mainWindow) {
-            dialog.showErrorBox('title', commandLine.join(' '));
+            // dialog.showErrorBox('title', commandLine.join(' '));
             mainWindow.loadURL(commandLine.pop().slice(0, -1));
             
             if (mainWindow.isMinimized()) mainWindow.restore()
@@ -33,7 +33,7 @@ if (!app.requestSingleInstanceLock()) {
     })
     
     app.whenReady().then(() => {
-        mainWindow = new Notion().init(preloadUrl)
-        dialog.showErrorBox('title1', preloadUrl);
+        mainWindow = new Cohesion().init(preloadUrl)
+        // dialog.showErrorBox('title1', preloadUrl);
     });
 }

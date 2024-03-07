@@ -9,7 +9,7 @@ import WindowSettingsModule from "./module/window-settings-module";
 
 const USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.9999.0 Safari/537.36";
 
-export default class Notion {
+export default class Cohesion {
 
     private readonly window: BrowserWindow;
     private readonly moduleManager: ModuleManager;
@@ -17,7 +17,7 @@ export default class Notion {
 
     constructor() {
         this.window = new BrowserWindow({
-            title: "Notion",
+            title: "Cohesion",
             width: 1100,
             height: 700,
             minWidth: 650,
