@@ -1,17 +1,17 @@
 import { BrowserWindow, Menu, MenuItem, Tray } from "electron";
 import { findIcon, getUnreadMessages } from "../util";
-import Notion from "../notion";
+import Cohesion from "../cohesion";
 import Module from "./module";
 
-const ICON = findIcon("io.github.brunofin.NotionDesktop.png");
-const ICON_UNREAD = findIcon("io.github.brunofin.NotionDesktop-unread.png");
+const ICON = findIcon("io.github.brunofin.Cohesion.png");
+const ICON_UNREAD = findIcon("io.github.brunofin.Cohesion-unread.png");
 
 export default class TrayModule extends Module {
 
     private readonly tray: Tray;
 
     constructor(
-        private readonly whatsApp: Notion,
+        private readonly cohesion: Cohesion,
         private readonly window: BrowserWindow
     ) {
         super();
@@ -26,16 +26,16 @@ export default class TrayModule extends Module {
     private updateMenu(unread: number = getUnreadMessages(this.window.title)) {
         const menu = Menu.buildFromTemplate([
             {
-                label: this.window.isVisible() ? "Minimize to tray" : "Show Notion",
+                label: this.window.isVisible() ? "Minimize to tray" : "Show Cohesion",
                 click: () => this.onClickFirstItem()
             },
             {
-                label: "Quit Notion",
-                click: () => this.whatsApp.quit()
+                label: "Quit Cohesion",
+                click: () => this.cohesion.quit()
             }
         ]);
 
-        let tooltip = "Notion";
+        let tooltip = "Cohesion";
 
         if (unread != 0) {
             menu.insert(0, new MenuItem({
@@ -68,7 +68,7 @@ export default class TrayModule extends Module {
         this.window.on("hide", () => this.updateMenu());
 
         this.window.on("close", event => {
-            if (this.whatsApp.quitting) return;
+            if (this.cohesion.quitting) return;
 
             event.preventDefault();
             this.window.hide();

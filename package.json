@@ -1,5 +1,5 @@
 {
-  "name": "notion-desktop-linux",
+  "name": "cohesion",
   "version": "1.2.3-2",
   "description": "Notion Desktop for Linux (unofficial)",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
     "typescript": "^4.8.4"
   },
   "build": {
-    "appId": "io.github.brunofin.NotionDesktop",
+    "appId": "io.github.brunofin.Cohesion",
     "directories": {
       "output": "./build"
     },

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>io.github.brunofin.NotionDesktop</id>
-  <name>Notion Desktop</name>
+  <id>io.github.brunofin.Cohesion</id>
+  <name>Cohesion</name>
   <summary>Unofficial Notion Desktop client</summary>
   
-  <launchable type="desktop-id">io.github.brunofin.NotionDesktop.desktop</launchable>
+  <launchable type="desktop-id">io.github.brunofin.Cohesion.desktop</launchable>
 
   <metadata_license>FSFAP</metadata_license>
   <project_license>MIT</project_license>
@@ -14,8 +14,8 @@
     <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Notion Inc.</p>
   </description>
 
-  <url type="bugtracker">https://github.com/brunofin/notion-desktop-linux/issues</url>
-  <url type="homepage">https://github.com/brunofin/notion-desktop-linux</url>
+  <url type="bugtracker">https://github.com/brunofin/cohesion/issues</url>
+  <url type="homepage">https://github.com/brunofin/cohesion</url>
 
   <recommends>
     <control>keyboard</control>
@@ -30,12 +30,14 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/brunofin/notion-desktop-linux/main/data/screenshots/screenshot-1.png</image>
+      <image>https://raw.githubusercontent.com/brunofin/cohesion/main/data/screenshots/screenshot-1.png</image>
       <caption>Login screen</caption>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release version="1.0.3" date="2024-03-07" />
+    <release version="1.0.2" date="2024-03-04" />
     <release version="1.0.1" date="2024-03-04" />
     <release version="1.0" date="2024-03-04" />
   </releases>
