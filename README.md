@@ -18,6 +18,8 @@ The official Flatpak build is updated instantly after every update.
 
 <a href="https://flathub.org/apps/details/io.github.brunofin.Cohesion"><img src="https://flathub.org/assets/badges/flathub-badge-en.png" width="250"></a>
 
+Manifest: https://github.com/flathub/io.github.brunofin.Cohesion
+
 ## :hammer: CLI arguments
 - `--start-hidden`: starts Cohesion hidden in tray.
 
