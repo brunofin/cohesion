@@ -13,6 +13,11 @@ While Cohesion aims to provide a seamless Notion experience on Linux, there are 
 - Currently, OAuth login is not supported. Users must authenticate using temporary Notion login codes.
 - Links to Notion from external applications do not automatically open in Cohesion.
 
+## Roadmap
+
+- Support multiple tabs.
+- Browser extension to open external Notion links in the app.
+
 ## Installation
 
 ### Recommended Method: Flathub
