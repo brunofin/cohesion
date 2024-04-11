@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Cohesion Redirector",
+  "version": "1.0",
+  "permissions": ["tabs", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  }
+}
