@@ -26,7 +26,7 @@ if (!app.requestSingleInstanceLock()) {
     app.on('second-instance', (event, commandLine, workingDirectory) => {
         // Someone tried to run a second instance, we should focus our window.
         if (mainWindow) {
-            console.log('title', commandLine.join(' '));
+            console.log('title', event, commandLine.join(' '), workingDirectory);
             mainWindow.loadURL(commandLine.pop().slice(0, -1));
             
             if (mainWindow.isMinimized()) mainWindow.restore()
