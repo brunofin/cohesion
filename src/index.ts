@@ -24,7 +24,8 @@ if (!app.requestSingleInstanceLock()) {
     app.on('second-instance', (event, commandLine, workingDirectory) => {
         // Someone tried to run a second instance, we should focus our window.
         if (mainWindow) {
-            const url = commandLine?.find(arg => arg.startsWith('notion://www.notion.so/'));
+            let url: string = commandLine?.find(arg => arg.startsWith('notion://www.notion.so/'));
+            if (url) url = url.replace('notion://', 'https://');
             mainWindow.loadURL(url);
             
             if (mainWindow.isMinimized()) mainWindow.restore()
