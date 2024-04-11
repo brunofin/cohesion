@@ -5,6 +5,8 @@
       <Path>../flathub-submission-notion</Path>
     </attachedFolders>
     <explicitIncludes />
-    <explicitExcludes />
+    <explicitExcludes>
+      <Path>dist</Path>
+    </explicitExcludes>
   </component>
 </project>
