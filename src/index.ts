@@ -6,7 +6,7 @@ let preloadUrl: string;
 
 app.on('open-url', (event, url) => {
     preloadUrl = url;
-    console.log('title2', preloadUrl);
+    console.log('title2', event, preloadUrl);
 })
 
 if (process.defaultApp) {
@@ -21,13 +21,11 @@ if (!app.requestSingleInstanceLock()) {
     app.quit();
     process.exit();
 } else {
-    console.log('title1', 'start');
-    
     app.on('second-instance', (event, commandLine, workingDirectory) => {
         // Someone tried to run a second instance, we should focus our window.
         if (mainWindow) {
-            console.log('title', event, commandLine.join(' '), workingDirectory);
-            mainWindow.loadURL(commandLine.pop().slice(0, -1));
+            const url = commandLine?.find(arg => arg.startsWith('notion://www.notion.so/'));
+            mainWindow.loadURL(url);
             
             if (mainWindow.isMinimized()) mainWindow.restore()
             mainWindow.focus()
