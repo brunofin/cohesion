@@ -1,4 +1,4 @@
-import {app, BrowserWindow, dialog} from 'electron';
+import {app, BrowserWindow} from 'electron';
 import Cohesion from './cohesion';
 
 let mainWindow: BrowserWindow;
@@ -6,7 +6,7 @@ let preloadUrl: string;
 
 app.on('open-url', (event, url) => {
     preloadUrl = url;
-    dialog.showErrorBox('title2', preloadUrl);
+    console.log('title2', preloadUrl);
 })
 
 if (process.defaultApp) {
@@ -21,12 +21,12 @@ if (!app.requestSingleInstanceLock()) {
     app.quit();
     process.exit();
 } else {
-    dialog.showErrorBox('title1', 'start');
+    console.log('title1', 'start');
     
     app.on('second-instance', (event, commandLine, workingDirectory) => {
         // Someone tried to run a second instance, we should focus our window.
         if (mainWindow) {
-            dialog.showErrorBox('title', commandLine.join(' '));
+            console.log('title', commandLine.join(' '));
             mainWindow.loadURL(commandLine.pop().slice(0, -1));
             
             if (mainWindow.isMinimized()) mainWindow.restore()
@@ -36,6 +36,6 @@ if (!app.requestSingleInstanceLock()) {
     
     app.whenReady().then(() => {
         mainWindow = new Cohesion().init(preloadUrl)
-        dialog.showErrorBox('title1', preloadUrl);
+        console.log('title1', preloadUrl);
     });
 }
