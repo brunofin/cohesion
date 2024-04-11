@@ -1,7 +1,7 @@
 {
   "name": "cohesion",
-  "version": "1.2.3-2",
-  "description": "Notion Desktop for Linux (unofficial)",
+  "version": "1.0.4",
+  "description": "A Notion Desktop client for Linux",
   "main": "dist/index.js",
   "scripts": {
     "dist": "tsc",

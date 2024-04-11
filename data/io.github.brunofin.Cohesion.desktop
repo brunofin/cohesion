@@ -1,7 +1,7 @@
 [Desktop Entry]
 
 Name=Cohesion
-Exec=cohesion
+Exec=cohesion %U
 Type=Application
 Icon=io.github.brunofin.Cohesion
 Comment=An unofficial Notion client for Linux, built with Electron.

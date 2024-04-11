@@ -44,8 +44,10 @@ export default class Cohesion {
 
         this.moduleManager.beforeLoad();
 
+        // TODO: add button to enable dev tools
         this.window.setMenu(null);
         this.window.loadURL(preloadUrl ?? 'https://notion.so/login', { userAgent: USER_AGENT });
+        // this.window.webContents.openDevTools();
 
         this.moduleManager.onLoad();
         
