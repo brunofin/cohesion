@@ -18,6 +18,11 @@ The official Flatpak build is updated instantly after every update.
 
 <a href="https://flathub.org/apps/details/io.github.brunofin.Cohesion"><img src="https://flathub.org/assets/badges/flathub-badge-en.png" width="250"></a>
 
+### Browser extensions
+Use the browser extension to open Notion links shared in 3rd party apps such as Slack, directly in the Cohesion desktop app. Their source code is also included in this repository.
+
+<a href="https://addons.mozilla.org/en-US/firefox/addon/cohesion-redirector/"><img src="https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png" width="172" height="60"></a>
+
 ## :hammer: CLI arguments
 - `--start-hidden`: starts Cohesion hidden in tray.
 
