@@ -1,22 +1,27 @@
 # Cohesion
-Cohesion is a Notion Linux client built with Electron. As Notion doesn't compile the official app for Linux, here is an unofficial build.
 
-Forked from the project [WhatsApp Desktop for Linux (unofficial)](https://github.com/mimbrero/whatsapp-desktop-linux) and modified to make it work with Notion.
+Cohesion is an unofficial Notion client for Linux, developed using Electron. Since Notion does not offer an official app for Linux users, Cohesion provides an alternative solution.
 
-## 📜 Disclaimer
-This just loads https://notion.so/ with some extra features, but never changing the content of the official webpage (html, css nor javascript). Linux users just can't install any official app, and Cohesion is running the official web client.
+## Disclaimer
 
-This wrapper is not verified by, affiliated with, or supported by Notion Inc.
+Cohesion functions as a wrapper for https://notion.so/, maintaining the integrity of the official webpage (html, css, and javascript). It's important to note that Cohesion is not endorsed, affiliated with, or supported by Notion Inc.
 
-## 🪲 Known Issues
-- Can't login with OAuth yet, authentication need to be done by temporary Notion login code.
-- Links to Notion opened from external apps are not redirected to Notion Desktop yet.
+## Known Issues
 
-## 💾 Installation
-### 🖱️✔️ Recommended: Flathub
-The official Flatpak build is updated instantly after every update.
+While Cohesion aims to provide a seamless Notion experience on Linux, there are some known issues that users should be aware of:
 
-<a href="https://flathub.org/apps/details/io.github.brunofin.Cohesion"><img src="https://flathub.org/assets/badges/flathub-badge-en.png" width="250"></a>
+- Currently, OAuth login is not supported. Users must authenticate using temporary Notion login codes.
+- Support multiple tabs.
+
+## Installation
+
+### Recommended Method: Flathub
+
+The easiest way to install Cohesion is through Flathub, where the official Flatpak build is maintained and updated promptly after each release.
+
+[![Flathub Badge](https://flathub.org/assets/badges/flathub-badge-en.png)](https://flathub.org/apps/details/io.github.brunofin.Cohesion)
+
+Manifest: [https://github.com/flathub/io.github.brunofin.Cohesion](https://github.com/flathub/io.github.brunofin.Cohesion)
 
 ### Browser extensions
 Use the browser extension to open Notion links shared in 3rd party apps such as Slack, directly in the Cohesion desktop app. Their source code is also included in this repository.
@@ -24,13 +29,17 @@ Use the browser extension to open Notion links shared in 3rd party apps such as 
 <a href="https://chromewebstore.google.com/detail/cohesion-redirector/nloncahmhbajbhmodfcmjndgmdknmimo"><img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png" width="206" height="58"></a>
 <a href="https://addons.mozilla.org/en-US/firefox/addon/cohesion-redirector/"><img src="https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png" width="172" height="60"></a>
 
-## :hammer: CLI arguments
-- `--start-hidden`: starts Cohesion hidden in tray.
+## CLI Arguments
 
-## :construction: Development
-PR and forks are welcome!
+Cohesion supports command-line arguments to customize its behavior:
 
-1. Clone the repo
+- `--start-hidden`: Launches Cohesion in a hidden state, accessible from the system tray.
+
+## Development
+
+Contributions to Cohesion are welcome! If you'd like to get involved, follow these steps to set up the development environment:
+
+1. Clone the repository
 ```bash
 git clone https://github.com/brunofin/cohesion.git
 cd cohesion
@@ -41,9 +50,12 @@ cd cohesion
 npm install
 ```
 
-3. Run or build
+3. Run or build the project
 ```bash
-npm start # compile and run
-npm run build # compile and build
+npm start # Compile and run
+npm run build # Compile and build
 ```
+
+Feel free to submit pull requests and contribute to the improvement of Cohesion!
+
 
