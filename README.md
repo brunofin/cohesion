@@ -21,6 +21,7 @@ The official Flatpak build is updated instantly after every update.
 ### Browser extensions
 Use the browser extension to open Notion links shared in 3rd party apps such as Slack, directly in the Cohesion desktop app. Their source code is also included in this repository.
 
+<a href="https://chromewebstore.google.com/detail/cohesion-redirector/nloncahmhbajbhmodfcmjndgmdknmimo"><img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png" width="206" height="58"></a>
 <a href="https://addons.mozilla.org/en-US/firefox/addon/cohesion-redirector/"><img src="https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png" width="172" height="60"></a>
 
 ## :hammer: CLI arguments
