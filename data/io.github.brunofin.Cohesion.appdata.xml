@@ -36,6 +36,11 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.4" date="2024-04-16">
+      <description>
+        <p>Add Chrome and Firefox extensions to open Notion links shared in 3rd party apps in Cohesion instead of the browser. Check the GitHub README.md file for extension links.</p>
+      </description>
+    </release>
     <release version="1.0.3" date="2024-03-07" />
     <release version="1.0.2" date="2024-03-04" />
     <release version="1.0.1" date="2024-03-04" />
