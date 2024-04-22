@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Cohesion Redirector",
   "version": "1.0",
-  "permissions": ["tabs", "activeTab"],
+  "permissions": ["tabs"],
   "background": {
     "service_worker": "background.js"
   },

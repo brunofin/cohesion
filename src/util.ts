@@ -12,8 +12,9 @@ export function findIcon(name: string) {
 }
 
 export function getUnreadMessages(title: string) {
-    const matches = title.match(/\(\d+\)/);
-    return matches == null ? 0 : Number.parseInt(matches[0].match(/\d+/)[0]);
+    const matches = title?.match(/\(\d+\)/);
+    if (!matches) return title?.startsWith("(9+)") ? Infinity : 0;
+    return Number.parseInt(matches[0].match(/\d+/)[0]);
 }
 
 function fromDataDirs(iconPath: string) {

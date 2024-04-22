@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Cohesion Redirector",
+  "version": "1.0",
+  "description": "Redirects Notion URLs to the Cohesion desktop app.",
+  "permissions": [
+    "tabs",
+    "webNavigation"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
