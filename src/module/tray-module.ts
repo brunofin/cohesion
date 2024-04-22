@@ -23,7 +23,7 @@ export default class TrayModule extends Module {
         this.registerListeners();
     }
 
-    private updateMenu(unread: number = getUnreadMessages(this.window.title)) {
+    private updateMenu(unread = getUnreadMessages(this.window.title)) {
         const menu = Menu.buildFromTemplate([
             {
                 label: this.window.isVisible() ? "Minimize to tray" : "Show Cohesion",
@@ -37,9 +37,9 @@ export default class TrayModule extends Module {
 
         let tooltip = "Cohesion";
 
-        if (unread != 0) {
+        if (unread !== 0) {
             menu.insert(0, new MenuItem({
-                label: unread + " unread notifications",
+                label: (unread === Infinity ? "9+" : unread) + " unread notifications",
                 enabled: false
             }));
 
@@ -77,7 +77,9 @@ export default class TrayModule extends Module {
         this.window.webContents.on("page-title-updated", (_event, title, explicitSet) => {
             if (!explicitSet) return;
 
-            let unread = getUnreadMessages(title);
+            const unread = getUnreadMessages(title);
+            
+            console.log(unread);
 
             this.updateMenu(unread);
             this.tray.setImage(unread == 0 ? ICON : ICON_UNREAD);
