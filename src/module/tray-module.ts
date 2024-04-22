@@ -79,8 +79,6 @@ export default class TrayModule extends Module {
 
             const unread = getUnreadMessages(title);
             
-            console.log(unread);
-
             this.updateMenu(unread);
             this.tray.setImage(unread == 0 ? ICON : ICON_UNREAD);
         });
