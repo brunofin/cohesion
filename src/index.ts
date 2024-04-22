@@ -6,9 +6,8 @@ const protocol = 'notion';
 
 function extractURL(args: string[]): string {
     let url: string = args?.find(arg => arg.startsWith(protocol + '://www.notion.so/'));
-    if (url) url = url.replace(protocol + '://', 'https://');
-
-    return url
+    if (!url) return;
+    return url.replace(protocol + '://', 'https://');
 }
 
 if (process.defaultApp) {
@@ -27,7 +26,7 @@ if (!app.requestSingleInstanceLock()) {
         // Someone tried to run a second instance, we should focus our window.
         if (mainWindow) {
             const url = extractURL(commandLine);
-            if (url) mainWindow.loadURL(extractURL(commandLine));
+            if (url) mainWindow.loadURL(url);
             
             if (mainWindow.isMinimized()) mainWindow.restore()
             mainWindow.focus()
