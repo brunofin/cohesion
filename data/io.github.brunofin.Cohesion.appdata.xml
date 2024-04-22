@@ -36,6 +36,13 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.5" date="2024-04-22">
+      <description>
+        <p>#9 A javascript error occurred in the main process</p>
+        <p>#8 Is there a way to disable spell check?</p>
+        <p>#3 Notifications are not detected when there are more than 9</p>
+      </description>
+    </release>
     <release version="1.0.4" date="2024-04-16">
       <description>
         <p>Add Chrome and Firefox extensions to open Notion links shared in 3rd party apps in Cohesion instead of the browser. Check the GitHub README.md file for extension links.</p>
