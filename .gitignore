@@ -6,3 +6,5 @@ dist/
 
 # Electron builder output
 build/
+
+browser-extension/chrome/chrome.zip
