@@ -25,7 +25,8 @@ export default class Cohesion {
             show: !process.argv.includes("--start-hidden"),
             webPreferences: {
                 preload: path.join(__dirname, 'preload.js'),
-                contextIsolation: false // native Notification override in preload :(
+                contextIsolation: false, // native Notification override in preload :(
+                spellcheck: !process.argv.includes("--disable-spellcheck"),
             }
         });
 

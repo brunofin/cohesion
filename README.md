@@ -34,6 +34,7 @@ Use the browser extension to open Notion links shared in 3rd party apps such as 
 Cohesion supports command-line arguments to customize its behavior:
 
 - `--start-hidden`: Launches Cohesion in a hidden state, accessible from the system tray.
+- `--disable-spellcheck`: Disables spellcheck in the editor. In the future, users will be able to do that through the app settings, and select multiple languages.
 
 ## Development
 
