@@ -8,3 +8,4 @@ dist/
 build/
 
 browser-extension/chrome/chrome.zip
+browser-extension/firefox/firefox.zip
