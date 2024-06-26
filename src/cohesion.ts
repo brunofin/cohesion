@@ -7,7 +7,7 @@ import ModuleManager from "./module/module-manager";
 import TrayModule from "./module/tray-module";
 import WindowSettingsModule from "./module/window-settings-module";
 
-const USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.9999.0 Safari/537.36";
+const USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 
 export default class Cohesion {
 
@@ -48,7 +48,7 @@ export default class Cohesion {
         // TODO: add button to enable dev tools
         this.window.setMenu(null);
         this.window.loadURL(preloadUrl ?? 'https://notion.so/login', { userAgent: USER_AGENT });
-        // this.window.webContents.openDevTools();
+        this.window.webContents.openDevTools();
 
         this.moduleManager.onLoad();
         
@@ -65,8 +65,20 @@ export default class Cohesion {
         app.quit();
     }
     
+
+
+    // this is probably where I should regisetr external and internal URLs
     private makeLinksOpenInBrowser() {
+
         this.window.webContents.setWindowOpenHandler(details => {
+
+//            if (details.url.includes('verifyNoPopupBlockerHtmlAndRedirect')) {
+//                const url = decodeURIComponent(details.url.split(('redirectUri='))[1]);
+//                console.log(url);
+//                shell.openExternal(url);
+//                return { action: 'deny' };
+//            }
+
             if (details.url != this.window.webContents.getURL()) {
                 shell.openExternal(details.url);
                 return { action: 'deny' };
