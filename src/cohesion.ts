@@ -72,6 +72,8 @@ export default class Cohesion {
 
         this.window.webContents.setWindowOpenHandler(details => {
 
+//            console.log(details.url, this.window.webContents.getURL(), details.url === this.window.webContents.getURL())
+//
 //            if (details.url.includes('verifyNoPopupBlockerHtmlAndRedirect')) {
 //                const url = decodeURIComponent(details.url.split(('redirectUri='))[1]);
 //                console.log(url);
