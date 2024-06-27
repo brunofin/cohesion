@@ -23,6 +23,10 @@ The easiest way to install Cohesion is through Flathub, where the official Flatp
 
 Manifest: [https://github.com/flathub/io.github.brunofin.Cohesion](https://github.com/flathub/io.github.brunofin.Cohesion)
 
+### Arch Linux users: AUR
+
+There is also a community-maintained package on the Arch Linux User Repository (AUR): [`cohesion-git`](https://aur.archlinux.org/packages/cohesion-git)
+
 ### Browser extensions
 Use the browser extension to open Notion links shared in 3rd party apps such as Slack, directly in the Cohesion desktop app. Their source code is also included in this repository.
 
