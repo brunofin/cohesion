@@ -36,6 +36,13 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.6" date="2024-06-27">
+      <description>
+        <p>#17 Color scheme: switching between dark/light themes not working in Flatpak without reopening Cohesion (fix inside)</p>
+        <p>#16 don't open Notion invoice in Cohesion</p>
+        <p>#14 firefox extension is not automatically closing tab after opening cohesion</p>
+      </description>
+    </release>
     <release version="1.0.5" date="2024-04-22">
       <description>
         <p>#9 A javascript error occurred in the main process</p>
