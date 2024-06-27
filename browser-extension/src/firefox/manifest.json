@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Cohesion Redirector",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Redirects Notion URLs to the Cohesion desktop app.",
   "permissions": [
     "tabs"
