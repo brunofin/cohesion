@@ -1,3 +1,6 @@
 [submodule "flatpak/flatpak-builder-tools"]
 	path = flatpak/flatpak-builder-tools
 	url = https://github.com/flatpak/flatpak-builder-tools.git
+[submodule "flatpak/flathub-manifest"]
+	path = flatpak/flathub-manifest
+	url = https://github.com/flathub/io.github.brunofin.Cohesion.git
