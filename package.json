@@ -14,7 +14,7 @@
     "preflatpak:generate-sources": "git submodule update --init --recursive",
     "flatpak:generate-sources": "./flatpak/generate-sources.sh"
   },
-  "author": "Bruno Finger",
+  "author": "Bruno Finger <bruno.k.finger@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "electron-store": "^8.1.0"
