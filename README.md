@@ -2,10 +2,6 @@
 
 Cohesion is an unofficial Notion client for Linux, developed using Electron. Since Notion does not offer an official app for Linux users, Cohesion provides an alternative solution.
 
-## Help wanted!
-
-- https://github.com/brunofin/cohesion/issues/25 A new app icon is needed. If you'd like to contribute, please read the ticket and feel free to submit a PR!
-
 ## Disclaimer
 
 Cohesion functions as a wrapper for https://notion.so/, maintaining the integrity of the official webpage (html, css, and javascript). It's important to note that Cohesion is not endorsed, affiliated with, or supported by Notion Inc.
@@ -16,6 +12,9 @@ While Cohesion aims to provide a seamless Notion experience on Linux, there are 
 
 - Currently, OAuth login is not supported. Users must authenticate using temporary Notion login codes.
 - Support multiple tabs.
+
+## Accepting donations 🩷
+If you'd like to support the project feel free to buy me a coffee. You can use the GitHub Sponsor button on the top of the page. Thank you!
 
 ## Installation
 
