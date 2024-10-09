@@ -11,12 +11,10 @@
     "build": "yarn run dist && electron-builder",
     "build:extensions": "cd browser-extension && ./build.sh",
     "build:snap": "yarn run dist && electron-builder --linux snap",
-    "preflatpak:generate-sources": "git submodule update --init --recursive",
-    "flatpak:generate-sources": "./flatpak/generate-sources.sh"
-  },
-  "engines": {
-    "node": "v20",
-    "yarn": "v1.22"
+    "preflatpak:generate-sources": "git submodule update --init --recursive flatpak/flatpak-builder-tools",
+    "flatpak:generate-sources": "./flatpak/generate-sources.sh",
+    "flatpak:lint": "",
+    "flatpak:build": "flatpak-builder --force-clean --user --install-deps-from=flathub --repo=repo --install builddir flatpak/flathub-manifest/io.github.brunofin.Cohesion.yml"
   },
   "author": "Bruno Finger <bruno.k.finger@gmail.com>",
   "license": "MIT",

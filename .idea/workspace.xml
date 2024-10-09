@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6397d41-1b50-4f78-b679-33258cd9ff4d" name="Changes" comment="Update to version 1.0.8, and #29">
+    <list default="true" id="d6397d41-1b50-4f78-b679-33258cd9ff4d" name="Changes" comment="Add sponsor info">
       <change beforePath="$PROJECT_DIR$/flatpak/flathub-manifest" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flathub-manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flatpak/flathub-manifest/io.github.brunofin.Cohesion.yml" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flathub-manifest/io.github.brunofin.Cohesion.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,17 +39,6 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1728498708" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/flatpak/flathub-manifest" />
-            </RecentBranchesForRepo>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
                     <option name="branchName" value="main" />
                     <option name="lastUsedInstant" value="1728499105" />
                   </RecentBranch>
@@ -58,6 +49,17 @@
                 </list>
               </option>
               <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1728501872" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/flatpak/flathub-manifest" />
             </RecentBranchesForRepo>
           </list>
         </option>
@@ -83,25 +85,47 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "45cd3be1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.flatpak:build.executor": "Run",
     "npm.flatpak:generate-sources.executor": "Run",
+    "npm.flatpak:lint.executor": "Run",
     "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/home/verde/repos/brunofin/notion-desktop-linux/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.flatpak:lint">
+    <configuration name="flatpak:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="flatpak:build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="flatpak:generate-sources" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="flatpak:generate-sources" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="flatpak:lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="flatpak:lint" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -119,6 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.flatpak:lint" />
+        <item itemvalue="npm.flatpak:build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.flatpak:generate-sources" />
         <item itemvalue="npm.start" />
@@ -133,7 +159,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728495243207</updated>
-      <workItem from="1728495244599" duration="5599000" />
+      <workItem from="1728495244599" duration="7862000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <option name="closed" value="true" />
@@ -159,7 +185,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728500377240</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add FUNDING.yml">
+      <option name="closed" value="true" />
+      <created>1728502037394</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728502037394</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add sponsor info">
+      <option name="closed" value="true" />
+      <created>1728502369559</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728502369559</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +268,9 @@
     <MESSAGE value="Update dependencies" />
     <MESSAGE value="#25 and #29" />
     <MESSAGE value="Update to version 1.0.8, and #29" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update to version 1.0.8, and #29" />
+    <MESSAGE value="Add FUNDING.yml" />
+    <MESSAGE value="Add sponsor info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add sponsor info" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
