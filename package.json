@@ -1,18 +1,22 @@
 {
   "name": "cohesion",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A Notion Desktop client for Linux",
   "main": "dist/index.js",
   "scripts": {
     "dist": "tsc",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "npm run dist && electron .",
-    "build": "npm run dist && electron-builder",
+    "start": "yarn run dist && electron .",
+    "build": "yarn run dist && electron-builder",
     "build:extensions": "cd browser-extension && ./build.sh",
-    "build:snap": "npm run dist && electron-builder --linux snap",
+    "build:snap": "yarn run dist && electron-builder --linux snap",
     "preflatpak:generate-sources": "git submodule update --init --recursive",
     "flatpak:generate-sources": "./flatpak/generate-sources.sh"
+  },
+  "engines": {
+    "node": "v20",
+    "yarn": "v1.22"
   },
   "author": "Bruno Finger <bruno.k.finger@gmail.com>",
   "license": "MIT",

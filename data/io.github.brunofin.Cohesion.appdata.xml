@@ -36,6 +36,17 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.8" date="2024-10-09">
+      <description>
+        <p>#25 Icon design (thanks @oiimrosabel!)</p>
+        <p>#29 Cohesion just returns blank after deleting browser cache of the browser that was used to sign in to Notion</p>
+      </description>
+    </release>
+    <release version="1.0.7" date="2024-06-28">
+      <description>
+        <p>#21 Problem with last version</p>
+      </description>
+    </release>
     <release version="1.0.6" date="2024-06-27">
       <description>
         <p>#17 Color scheme: switching between dark/light themes not working in Flatpak without reopening Cohesion (fix inside)</p>
