@@ -56,13 +56,21 @@ cd cohesion
 
 2. Install dependencies
 ```bash
-npm install
+yarn install
 ```
 
 3. Run or build the project
 ```bash
-npm start # Compile and run
-npm run build # Compile and build
+yarn start # Compile and run
+yarn run build # Compile and build
+```
+
+### Flatpak
+
+Generate the offilne dependencies with
+
+```bash
+yarn run flatpak:generate-sources
 ```
 
 Feel free to submit pull requests and contribute to the improvement of Cohesion!
