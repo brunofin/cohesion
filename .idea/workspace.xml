@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6397d41-1b50-4f78-b679-33258cd9ff4d" name="Changes" comment="Add sponsor info">
+    <list default="true" id="d6397d41-1b50-4f78-b679-33258cd9ff4d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/flatpak/flathub-manifest" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flathub-manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flatpak/flathub-manifest/io.github.brunofin.Cohesion.yml" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flathub-manifest/io.github.brunofin.Cohesion.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -27,7 +31,7 @@
         <entry key="$PROJECT_DIR$/flatpak/flathub-manifest" value="0ed77a5a69aab8de4af0482ef8d353ade26e2e2f" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/flatpak/flathub-manifest" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitToolBoxStore">
@@ -55,7 +59,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1728501872" />
+                    <option name="lastUsedInstant" value="1728505744" />
                   </RecentBranch>
                 </list>
               </option>
@@ -67,8 +71,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/package-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/package-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/package.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -85,7 +91,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "45cd3be1",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,7 +106,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.flatpak:lint">
+  <component name="RunManager" selected="npm.flatpak:generate-sources">
     <configuration name="flatpak:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -143,10 +149,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.flatpak:lint" />
-        <item itemvalue="npm.flatpak:build" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.flatpak:generate-sources" />
+        <item itemvalue="npm.flatpak:build" />
+        <item itemvalue="npm.flatpak:lint" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -159,7 +165,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728495243207</updated>
-      <workItem from="1728495244599" duration="7862000" />
+      <workItem from="1728495244599" duration="10427000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <option name="closed" value="true" />
@@ -201,7 +207,31 @@
       <option name="project" value="LOCAL" />
       <updated>1728502369559</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="few updates">
+      <option name="closed" value="true" />
+      <created>1728506689895</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728506689895</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update sources">
+      <option name="closed" value="true" />
+      <created>1728506876009</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728506876009</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update manifest">
+      <option name="closed" value="true" />
+      <created>1728507607874</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728507607874</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +300,10 @@
     <MESSAGE value="Update to version 1.0.8, and #29" />
     <MESSAGE value="Add FUNDING.yml" />
     <MESSAGE value="Add sponsor info" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add sponsor info" />
+    <MESSAGE value="few updates" />
+    <MESSAGE value="Update sources" />
+    <MESSAGE value="Update manifest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update manifest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
