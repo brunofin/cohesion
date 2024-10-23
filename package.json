@@ -11,7 +11,8 @@
     "build": "npm run dist && electron-builder",
     "build:extensions": "cd browser-extension && ./build.sh",
     "build:snap": "npm run dist && electron-builder --linux snap",
-    "preflatpak:generate-sources": "git submodule update --init --recursive flatpak/flatpak-builder-tools",
+    "flatpak:init-tools": "git submodule update --init --recursive flatpak/flatpak-builder-tools",
+    "preflatpak:generate-sources": "rm -rf node_modules && npm install --package-lock-only",
     "flatpak:generate-sources": "./flatpak/generate-sources.sh",
     "flatpak:lint": "",
     "flatpak:build": "flatpak-builder --force-clean --user --install-deps-from=flathub --repo=repo --install builddir flatpak/flathub-manifest/io.github.brunofin.Cohesion.yml"

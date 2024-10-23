@@ -3,6 +3,13 @@
   <component name="UserContentModel">
     <attachedFolders />
     <explicitIncludes />
-    <explicitExcludes />
+    <explicitExcludes>
+      <Path>.flatpak-builder</Path>
+      <Path>browser-extension/dist</Path>
+      <Path>builddir</Path>
+      <Path>dist</Path>
+      <Path>flatpak/flatpak-builder-tools</Path>
+      <Path>repo</Path>
+    </explicitExcludes>
   </component>
 </project>

@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6397d41-1b50-4f78-b679-33258cd9ff4d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flatpak/flathub-manifest" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flathub-manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flatpak/flatpak-builder-tools" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flatpak-builder-tools" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flatpak/generate-sources.sh" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/generate-sources.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +37,7 @@
         <entry key="$PROJECT_DIR$/flatpak/flathub-manifest" value="0ed77a5a69aab8de4af0482ef8d353ade26e2e2f" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/flatpak/flathub-manifest" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitToolBoxStore">
@@ -65,6 +71,17 @@
               </option>
               <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/flatpak/flathub-manifest" />
             </RecentBranchesForRepo>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1729710491" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/flatpak/flatpak-builder-tools" />
+            </RecentBranchesForRepo>
           </list>
         </option>
       </RecentBranches>
@@ -72,16 +89,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/package-lock.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/package-lock.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/package.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tsconfig.json" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2nD6LSirX3YoK9OUiiSDu30QEsb" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -91,7 +107,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,6 +116,7 @@
     "npm.flatpak:build.executor": "Run",
     "npm.flatpak:generate-sources.executor": "Run",
     "npm.flatpak:lint.executor": "Run",
+    "npm.preflatpak:generate-sources.executor": "Run",
     "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/home/verde/repos/brunofin/notion-desktop-linux/node_modules/typescript/lib",
@@ -137,6 +154,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="preflatpak:generate-sources" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="preflatpak:generate-sources" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -150,9 +177,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.flatpak:generate-sources" />
+        <item itemvalue="npm.preflatpak:generate-sources" />
         <item itemvalue="npm.flatpak:build" />
         <item itemvalue="npm.flatpak:lint" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -166,6 +193,10 @@
       <option name="presentableId" value="Default" />
       <updated>1728495243207</updated>
       <workItem from="1728495244599" duration="10427000" />
+      <workItem from="1729020365692" duration="3659000" />
+      <workItem from="1729025954471" duration="980000" />
+      <workItem from="1729705980743" duration="3861000" />
+      <workItem from="1729710767683" duration="246000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <option name="closed" value="true" />
@@ -231,7 +262,47 @@
       <option name="project" value="LOCAL" />
       <updated>1728507607874</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="debug issues with flatpak build">
+      <option name="closed" value="true" />
+      <created>1729707050848</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729707050848</updated>
+    </task>
+    <task id="LOCAL-00010" summary="debug issues with flatpak build">
+      <option name="closed" value="true" />
+      <created>1729708803509</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729708803509</updated>
+    </task>
+    <task id="LOCAL-00011" summary="debug issues with flatpak build">
+      <option name="closed" value="true" />
+      <created>1729709872171</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1729709872171</updated>
+    </task>
+    <task id="LOCAL-00012" summary="debug issues with flatpak build">
+      <option name="closed" value="true" />
+      <created>1729710498854</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1729710498854</updated>
+    </task>
+    <task id="LOCAL-00013" summary="debug issues with flatpak build">
+      <option name="closed" value="true" />
+      <created>1729710801598</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1729710801598</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,14 +310,51 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="OPEN_GENERIC_TABS">
       <map>
         <entry key="6f1d3177-881f-407f-9856-6a40370d288a" value="TOOL_WINDOW" />
+        <entry key="582fc5c1-ea68-43d6-9bf7-fb92218bf768" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="582fc5c1-ea68-43d6-9bf7-fb92218bf768">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
         <entry key="6f1d3177-881f-407f-9856-6a40370d288a">
           <value>
             <State>
@@ -293,7 +401,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Update dependencies" />
     <MESSAGE value="#25 and #29" />
@@ -303,7 +410,9 @@
     <MESSAGE value="few updates" />
     <MESSAGE value="Update sources" />
     <MESSAGE value="Update manifest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update manifest" />
+    <MESSAGE value="Revert back to npm" />
+    <MESSAGE value="debug issues with flatpak build" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug issues with flatpak build" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
