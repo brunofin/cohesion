@@ -5,6 +5,7 @@ Exec=cohesion %U
 Type=Application
 Icon=io.github.brunofin.Cohesion
 Comment=An unofficial Notion client for Linux, built with Electron.
+Keywords=Notion;Notes;
 Categories=Office;Development;
 StartupWMClass=cohesion
 MimeType=x-scheme-handler/notion;
