@@ -2,9 +2,14 @@ import { BrowserWindow, Menu, MenuItem, Tray } from "electron";
 import { findIcon, getUnreadMessages } from "../util";
 import Cohesion from "../cohesion";
 import Module from "./module";
+import Settings from "../settings";
 
 const ICON = findIcon("io.github.brunofin.Cohesion.png");
 const ICON_UNREAD = findIcon("io.github.brunofin.Cohesion-unread.png");
+const ICON_GREYSCALE = findIcon("io.github.brunofin.Cohesion-greyscale.png");
+const ICON_GREYSCALE_UNREAD = findIcon("io.github.brunofin.Cohesion-greyscale-unread.png");
+
+const settings = new Settings("tray");
 
 export default class TrayModule extends Module {
 
@@ -15,7 +20,7 @@ export default class TrayModule extends Module {
         private readonly window: BrowserWindow
     ) {
         super();
-        this.tray = new Tray(ICON);
+        this.tray = new Tray(settings.get("greyscale", false) ? ICON_GREYSCALE : ICON);
     }
 
     public override onLoad() {
@@ -27,12 +32,24 @@ export default class TrayModule extends Module {
         const menu = Menu.buildFromTemplate([
             {
                 label: this.window.isVisible() ? "Minimize to tray" : "Show Cohesion",
-                click: () => this.onClickFirstItem()
+                click: () => this.onClickFirstItem(unread)
+            },
+            {
+                label: settings.get("greyscale", false) ? "Use color icon" : "Use greyscale icon",
+                click: () => {
+                    settings.set("greyscale", !settings.get("greyscale", false));
+
+                    this.tray.setImage(unread == 0 ?
+                        (settings.get("greyscale", false) ? ICON_GREYSCALE : ICON) :
+                        (settings.get("greyscale", false) ? ICON_GREYSCALE_UNREAD : ICON_UNREAD));
+                    
+                    this.updateMenu(unread);
+                }
             },
             {
                 label: "Quit Cohesion",
                 click: () => this.cohesion.quit()
-            }
+            },
         ]);
 
         let tooltip = "Cohesion";
@@ -52,7 +69,7 @@ export default class TrayModule extends Module {
         this.tray.setToolTip(tooltip);
     }
 
-    private onClickFirstItem() {
+    private onClickFirstItem(unread = getUnreadMessages(this.window.title)) {
         if (this.window.isVisible()) {
             this.window.hide();
         } else {
@@ -60,7 +77,7 @@ export default class TrayModule extends Module {
             this.window.focus();
         }
 
-        this.updateMenu();
+        this.updateMenu(unread);
     }
 
     private registerListeners() {
@@ -80,7 +97,12 @@ export default class TrayModule extends Module {
             const unread = getUnreadMessages(title);
             
             this.updateMenu(unread);
-            this.tray.setImage(unread == 0 ? ICON : ICON_UNREAD);
+            this.tray.setImage(unread == 0 ? 
+                (settings.get("greyscale", false) ? ICON_GREYSCALE : ICON) :
+                (settings.get("greyscale", false) ? ICON_GREYSCALE_UNREAD : ICON_UNREAD));
         });
+        
+        this.tray.on("click", () => this.onClickFirstItem());
+        this.tray.on("double-click", () => this.onClickFirstItem());
     }
 };
