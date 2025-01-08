@@ -36,6 +36,13 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.9" date="2025-01-08">
+      <description>
+        <p>#35 [Feature request] Graysale tray icon</p>
+        <p>#34 Allow Cohesion to pop up when you search for "Notion"</p>
+        <p>#26 [Request] Left click on tray icon to restore window</p>
+      </description>
+    </release>
     <release version="1.0.8" date="2024-10-09">
       <description>
         <p>#25 Icon design (thanks @oiimrosabel!)</p>
