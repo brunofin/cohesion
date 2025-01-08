@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d6397d41-1b50-4f78-b679-33258cd9ff4d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/flatpak/flathub-manifest" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flathub-manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,7 @@
         <entry key="$PROJECT_DIR$/flatpak/flathub-manifest" value="0ed77a5a69aab8de4af0482ef8d353ade26e2e2f" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/flatpak/flathub-manifest" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitToolBoxStore">
@@ -82,8 +84,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tsconfig.json" root0="SKIP_HIGHLIGHTING" />
@@ -102,26 +103,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.flatpak:build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.flatpak:generate-sources.executor&quot;: &quot;Run&quot;,
-    &quot;npm.flatpak:lint.executor&quot;: &quot;Run&quot;,
-    &quot;npm.preflatpak:generate-sources.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/verde/repos/brunofin/notion-desktop-linux/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.flatpak:build.executor": "Run",
+    "npm.flatpak:generate-sources.executor": "Run",
+    "npm.flatpak:lint.executor": "Run",
+    "npm.preflatpak:generate-sources.executor": "Run",
+    "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/home/verde/.local/share/JetBrains/Toolbox/apps/rider/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="npm.flatpak:generate-sources">
+}]]></component>
+  <component name="RunManager" selected="npm.start">
     <configuration name="flatpak:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -168,17 +169,17 @@
       <scripts>
         <script value="start" />
       </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v16.14.0/bin/node" />
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.14.0/bin/node" />
       <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.flatpak:generate-sources" />
         <item itemvalue="npm.preflatpak:generate-sources" />
         <item itemvalue="npm.flatpak:build" />
         <item itemvalue="npm.flatpak:lint" />
-        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +197,7 @@
       <workItem from="1729705980743" duration="3861000" />
       <workItem from="1729710767683" duration="246000" />
       <workItem from="1729711035463" duration="2982000" />
+      <workItem from="1736368535967" duration="259000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <option name="closed" value="true" />
