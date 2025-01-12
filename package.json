@@ -1,6 +1,6 @@
 {
   "name": "cohesion",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A Notion Desktop client for Linux",
   "main": "dist/index.js",
   "scripts": {
