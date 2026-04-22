@@ -21,7 +21,7 @@
   "author": "Bruno Finger <bruno.k.finger@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "electron-store": "8.2.0"
+    "electron-store": "11.0.2"
   },
   "devDependencies": {
     "electron": "33.3.1",
