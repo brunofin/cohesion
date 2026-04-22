@@ -2,7 +2,7 @@ import { ipcRenderer } from "electron";
 
 function overrideNotification() {
     window.Notification = class extends Notification {
-        constructor(title: string, options: NotificationOptions) {
+        constructor(title: string, options?: NotificationOptions) {
             super(title, options);
             this.onclick = _event => ipcRenderer.send("notification-click");
         }

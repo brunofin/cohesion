@@ -4,9 +4,9 @@ import Cohesion from './cohesion.js';
 let mainWindow: BrowserWindow;
 const protocol = 'notion';
 
-function extractURL(args: string[]): string {
-    let url: string = args?.find(arg => arg.startsWith(protocol + '://www.notion.so/'));
-    if (!url) return;
+function extractURL(args: string[]): string | undefined {
+    const url = args?.find(arg => arg.startsWith(protocol + '://www.notion.so/'));
+    if (!url) return undefined;
     return url.replace(protocol + '://', 'https://');
 }
 
