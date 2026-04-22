@@ -1,11 +1,12 @@
 {
   "name": "cohesion",
   "version": "1.0.9",
+  "type": "module",
   "description": "A Notion Desktop client for Linux",
   "main": "dist/index.js",
   "scripts": {
-    "dist": "tsc",
-    "watch": "tsc -w",
+    "dist": "tsc -p tsconfig.json && tsc -p tsconfig.preload.json",
+    "watch": "tsc -p tsconfig.json -w & tsc -p tsconfig.preload.json -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "start": "npm run dist && electron .",
     "build": "npm run dist && electron-builder",

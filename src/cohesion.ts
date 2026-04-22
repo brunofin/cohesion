@@ -1,11 +1,14 @@
 import { app, BrowserWindow, ipcMain, shell } from "electron";
 import path from "path";
-import ChromeVersionFix from "./fix/chrome-version-fix";
-import Electron21Fix from "./fix/electron-21-fix";
-import HotkeyModule from "./module/hotkey-module";
-import ModuleManager from "./module/module-manager";
-import TrayModule from "./module/tray-module";
-import WindowSettingsModule from "./module/window-settings-module";
+import { fileURLToPath } from "url";
+import ChromeVersionFix from "./fix/chrome-version-fix.js";
+import Electron21Fix from "./fix/electron-21-fix.js";
+import HotkeyModule from "./module/hotkey-module.js";
+import ModuleManager from "./module/module-manager.js";
+import TrayModule from "./module/tray-module.js";
+import WindowSettingsModule from "./module/window-settings-module.js";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 

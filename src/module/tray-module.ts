@@ -1,8 +1,8 @@
 import { BrowserWindow, Menu, MenuItem, Tray } from "electron";
-import { findIcon, getUnreadMessages } from "../util";
-import Cohesion from "../cohesion";
-import Module from "./module";
-import Settings from "../settings";
+import { findIcon, getUnreadMessages } from "../util.js";
+import Cohesion from "../cohesion.js";
+import Module from "./module.js";
+import Settings from "../settings.js";
 
 const ICON = findIcon("io.github.brunofin.Cohesion.png");
 const ICON_UNREAD = findIcon("io.github.brunofin.Cohesion-unread.png");

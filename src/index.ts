@@ -1,5 +1,5 @@
 import {app, BrowserWindow} from 'electron';
-import Cohesion from './cohesion';
+import Cohesion from './cohesion.js';
 
 let mainWindow: BrowserWindow;
 const protocol = 'notion';

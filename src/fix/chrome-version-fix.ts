@@ -1,6 +1,6 @@
 import { ipcMain } from "electron";
-import Cohesion from "../cohesion";
-import Fix from "./fix";
+import Cohesion from "../cohesion.js";
+import Fix from "./fix.js";
 
 export default class ChromeVersionFix extends Fix {
 

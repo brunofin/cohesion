@@ -1,6 +1,6 @@
 import { BrowserWindow, Event, Input } from "electron";
-import Cohesion from "../cohesion";
-import Module from "./module";
+import Cohesion from "../cohesion.js";
+import Module from "./module.js";
 
 interface ClickAction {
     control?: boolean,

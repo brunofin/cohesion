@@ -1,8 +1,8 @@
 import { app, session } from "electron";
 import fs from "fs";
 import path from "path";
-import Settings from "../settings";
-import Fix from "./fix";
+import Settings from "../settings.js";
+import Fix from "./fix.js";
 
 const settings = new Settings("fixes");
 

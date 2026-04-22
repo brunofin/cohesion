@@ -1,7 +1,7 @@
 import { BrowserWindow } from 'electron';
-import Settings from '../settings';
-import Cohesion from '../cohesion';
-import Module from './module';
+import Settings from '../settings.js';
+import Cohesion from '../cohesion.js';
+import Module from './module.js';
 
 const settings = new Settings("window");
 
