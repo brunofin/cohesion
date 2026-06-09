@@ -7,7 +7,7 @@ import ModuleManager from "./module/module-manager";
 import TrayModule from "./module/tray-module";
 import WindowSettingsModule from "./module/window-settings-module";
 
-const USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
+const USER_AGENT = app.userAgentFallback.replace(/\sElectron\/[\d.]+/g, "");
 
 export default class Cohesion {
 
@@ -66,27 +66,64 @@ export default class Cohesion {
     }
     
 
-
-    // this is probably where I should regisetr external and internal URLs
-    private makeLinksOpenInBrowser() {
-
-        this.window.webContents.setWindowOpenHandler(details => {
-
-//            console.log(details.url, this.window.webContents.getURL(), details.url === this.window.webContents.getURL())
-//
-//            if (details.url.includes('verifyNoPopupBlockerHtmlAndRedirect')) {
-//                const url = decodeURIComponent(details.url.split(('redirectUri='))[1]);
-//                console.log(url);
-//                shell.openExternal(url);
-//                return { action: 'deny' };
-//            }
-
-            if (details.url != this.window.webContents.getURL()) {
-                shell.openExternal(details.url);
-                return { action: 'deny' };
-            }
-        });
+private makeLinksOpenInBrowser() {
+  this.window.webContents.setWindowOpenHandler((details) => {
+    if (this.shouldOpenInsideApp(details.url)) {
+      return {
+        action: "allow",
+        overrideBrowserWindowOptions: {
+          parent: this.window,
+          width: 520,
+          height: 720,
+          title: "Cohesion Authentication",
+          webPreferences: {
+            nodeIntegration: false,
+            contextIsolation: true,
+            sandbox: true,
+            spellcheck: !process.argv.includes("--disable-spellcheck"),
+          },
+        },
+      };
     }
+
+    shell.openExternal(details.url);
+    return { action: "deny" };
+  });
+
+  this.window.webContents.on("did-create-window", (childWindow: BrowserWindow) => {
+    childWindow.setMenu(null);
+
+    childWindow.webContents.setWindowOpenHandler((details) => {
+      if (this.shouldOpenInsideApp(details.url)) {
+        return { action: "allow" };
+      }
+
+      shell.openExternal(details.url);
+      return { action: "deny" };
+    });
+  });
+}
+
+private shouldOpenInsideApp(rawUrl: string): boolean {
+  try {
+    const url = new URL(rawUrl);
+    const host = url.hostname.toLowerCase();
+
+    return (
+      host === "notion.so" ||
+      host === "www.notion.so" ||
+      host.endsWith(".notion.so") ||
+      host === "notion.com" ||
+      host === "www.notion.com" ||
+      host.endsWith(".notion.com") ||
+      host === "accounts.google.com" ||
+      host === "appleid.apple.com" ||
+      host === "login.microsoftonline.com"
+    );
+  } catch {
+    return false;
+  }
+}
 
     private registerListeners() {
         app.on('second-instance', () => {
