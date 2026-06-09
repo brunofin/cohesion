@@ -66,6 +66,8 @@ export default class Cohesion {
     }
     
 
+//OAuth login support
+//opens up a new window inside Cohesion to authenticate the login
 private makeLinksOpenInBrowser() {
   this.window.webContents.setWindowOpenHandler((details) => {
     if (this.shouldOpenInsideApp(details.url)) {
@@ -95,7 +97,7 @@ private makeLinksOpenInBrowser() {
 
     childWindow.webContents.setWindowOpenHandler((details) => {
       if (this.shouldOpenInsideApp(details.url)) {
-        return { action: "allow" };
+        return { action: "allow" }; //returns allow, if deny is returned the browser blocks the popup
       }
 
       shell.openExternal(details.url);
@@ -104,6 +106,7 @@ private makeLinksOpenInBrowser() {
   });
 }
 
+//creates a hostname based on which OAuth option is selected
 private shouldOpenInsideApp(rawUrl: string): boolean {
   try {
     const url = new URL(rawUrl);
