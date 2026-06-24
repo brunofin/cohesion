@@ -4,7 +4,7 @@
   "description": "A Notion Desktop client for Linux",
   "main": "dist/index.js",
   "scripts": {
-    "dist": "tsc",
+    "dist": "tsc && cp src/*.html dist/",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "start": "npm run dist && electron .",

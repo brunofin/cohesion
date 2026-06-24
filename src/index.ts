@@ -1,6 +1,7 @@
 import {app, BrowserWindow} from 'electron';
 import Cohesion from './cohesion';
 
+let cohesionApp: Cohesion;
 let mainWindow: BrowserWindow;
 const protocol = 'notion';
 
@@ -23,17 +24,17 @@ if (!app.requestSingleInstanceLock()) {
     process.exit();
 } else {
     app.on('second-instance', (event, commandLine) => {
-        // Someone tried to run a second instance, we should focus our window.
-        if (mainWindow) {
+        if (cohesionApp) {
             const url = extractURL(commandLine);
-            if (url) mainWindow.loadURL(url);
-            
-            if (mainWindow.isMinimized()) mainWindow.restore()
-            mainWindow.focus()
+            if (url) cohesionApp.openUrl(url);
+
+            if (mainWindow.isMinimized()) mainWindow.restore();
+            mainWindow.focus();
         }
     })
-    
+
     app.whenReady().then(() => {
-        mainWindow = new Cohesion().init(extractURL(process.argv))
+        cohesionApp = new Cohesion();
+        mainWindow = cohesionApp.init(extractURL(process.argv));
     });
 }
