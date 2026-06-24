@@ -70,23 +70,6 @@
             background-color: #555;
             color: #fff;
         }
-        #new-tab {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
-            cursor: pointer;
-            color: #9b9b9b;
-            font-size: 18px;
-            flex-shrink: 0;
-            margin-left: auto;
-        }
-        #new-tab:hover {
-            background-color: #2a2a2a;
-            color: #fff;
-        }
     </style>
 </head>
 <body>
@@ -121,17 +104,6 @@
 
       tabBar.appendChild(tabEl);
     });
-
-    const addBtn = document.createElement('div');
-    addBtn.id = 'new-tab';
-    addBtn.textContent = '+';
-    addBtn.addEventListener('click', async () => {
-      const url = prompt('Enter URL:', 'https://notion.so/login');
-      if (url) {
-        window.tabsAPI.addTab(url);
-      }
-    });
-    tabBar.appendChild(addBtn);
   }
 
   window.tabsAPI.onUpdateTabs(() => {

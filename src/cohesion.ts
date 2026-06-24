@@ -243,10 +243,6 @@ export default class Cohesion {
             this.switchTab(index);
         });
 
-        ipcMain.on('add-tab', (event, url) => {
-            this.openTab(url);
-        });
-
         ipcMain.on('close-tab', (event, index) => {
             this.closeTab(index);
         });

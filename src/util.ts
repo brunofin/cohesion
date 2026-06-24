@@ -14,11 +14,11 @@ export function findIcon(name: string) {
 export function getUnreadMessages(title: string) {
     const matches = title?.match(/\(\d+\)/);
     if (!matches) return title?.startsWith("(9+)") ? Infinity : 0;
-    return Number.parseInt(matches[0].match(/\d+/)[0]);
+    return Number.parseInt(matches[0].match(/\d+/)?.[0] ?? '0');
 }
 
 function fromDataDirs(iconPath: string) {
-    for (let dataDir of process.env.XDG_DATA_DIRS.split(":")) {
+    for (let dataDir of (process.env.XDG_DATA_DIRS ?? '/usr/local/share:/usr/share').split(":")) {
         let fullPath = path.join(dataDir, iconPath);
         if (fs.existsSync(fullPath))
             return fullPath;

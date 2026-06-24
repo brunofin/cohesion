@@ -20,12 +20,12 @@
   "author": "Bruno Finger <bruno.k.finger@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "electron-store": "8.2.0"
+    "electron-store": "11.0.2"
   },
   "devDependencies": {
-    "electron": "33.3.1",
-    "electron-builder": "25.1.8",
-    "typescript": "5.7.3"
+    "electron": "42.5.0",
+    "electron-builder": "26.15.3",
+    "typescript": "6.0.3"
   },
   "build": {
     "appId": "io.github.brunofin.Cohesion",
