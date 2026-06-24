@@ -91,17 +91,17 @@ export default class TrayModule extends Module {
             this.window.hide();
         });
 
-        this.window.webContents.on("page-title-updated", (_event, title, explicitSet) => {
+        this.cohesion.onTitleUpdate = (title, explicitSet) => {
             if (!explicitSet) return;
 
             const unread = getUnreadMessages(title);
-            
+
             this.updateMenu(unread);
-            this.tray.setImage(unread == 0 ? 
+            this.tray.setImage(unread == 0 ?
                 (settings.get("greyscale", false) ? ICON_GREYSCALE : ICON) :
                 (settings.get("greyscale", false) ? ICON_GREYSCALE_UNREAD : ICON_UNREAD));
-        });
-        
+        };
+
         this.tray.on("click", () => this.onClickFirstItem());
         this.tray.on("double-click", () => this.onClickFirstItem());
     }
