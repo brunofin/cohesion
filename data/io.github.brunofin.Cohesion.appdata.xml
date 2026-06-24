@@ -36,6 +36,13 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.10" date="2026-06-24">
+      <description>
+        <p>Update dependencies</p>
+        <p>#5 Tabs support</p>
+        <p>#51 and #54 Your browser is not compatible with Notion</p>
+      </description>
+    </release>
     <release version="1.0.9" date="2025-01-08">
       <description>
         <p>#35 [Feature request] Graysale tray icon</p>
