@@ -165,14 +165,17 @@ export default class Cohesion {
         this.tabsView.webContents.send('update-tabs');
     }
 
+    private readonly startHidden: boolean;
+
     constructor() {
+        this.startHidden = process.argv.includes("--start-hidden") || app.commandLine.hasSwitch("start-hidden");
         this.window = new BrowserWindow({
             title: "Cohesion",
             width: 1100,
             height: 700,
             minWidth: 650,
             minHeight: 550,
-            show: !process.argv.includes("--start-hidden"),
+            show: false,
         });
 
         this.window.on('resize', () => this.updateTabBarVisibility());
@@ -207,6 +210,10 @@ export default class Cohesion {
         this.openTab(preloadUrl ?? 'https://notion.so/login');
 
         this.moduleManager.onLoad();
+
+        if (!this.startHidden) {
+            this.window.show();
+        }
 
         return this.window;
     }
