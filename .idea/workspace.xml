@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6397d41-1b50-4f78-b679-33258cd9ff4d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/tabs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tabsPreload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flatpak/flathub-manifest" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flathub-manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cohesion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/cohesion.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/notionPreload.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +89,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
@@ -98,30 +104,44 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2nD6LSirX3YoK9OUiiSDu30QEsb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.flatpak:build.executor": "Run",
-    "npm.flatpak:generate-sources.executor": "Run",
-    "npm.flatpak:lint.executor": "Run",
-    "npm.preflatpak:generate-sources.executor": "Run",
-    "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/home/verde/.local/share/JetBrains/Toolbox/apps/rider/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/verde/lab/Notion/resources/output-folder&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.flatpak:build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.flatpak:generate-sources.executor&quot;: &quot;Run&quot;,
+    &quot;npm.flatpak:lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.preflatpak:generate-sources.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/verde/repos/brunofin/notion-desktop-linux/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RunManager" selected="npm.start">
     <configuration name="flatpak:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -143,21 +163,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="flatpak:lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="flatpak:lint" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="preflatpak:generate-sources" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="preflatpak:generate-sources" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$USER_HOME$/lab/Notion/resources/output-folder/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -176,10 +196,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.flatpak:generate-sources" />
         <item itemvalue="npm.preflatpak:generate-sources" />
         <item itemvalue="npm.flatpak:build" />
-        <item itemvalue="npm.flatpak:lint" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +217,11 @@
       <workItem from="1729705980743" duration="3861000" />
       <workItem from="1729710767683" duration="246000" />
       <workItem from="1729711035463" duration="2982000" />
-      <workItem from="1736368535967" duration="259000" />
+      <workItem from="1736368535967" duration="5359000" />
+      <workItem from="1736408586939" duration="2245000" />
+      <workItem from="1736977204761" duration="1595000" />
+      <workItem from="1737043326800" duration="3220000" />
+      <workItem from="1737147491131" duration="5515000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <option name="closed" value="true" />
@@ -327,7 +351,39 @@
       <option name="project" value="LOCAL" />
       <updated>1729714793941</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="[Feature request] Graysale tray icon #35">
+      <option name="closed" value="true" />
+      <created>1736372900554</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1736372900554</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update release v1.0.9">
+      <option name="closed" value="true" />
+      <created>1736373318506</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1736373318506</updated>
+    </task>
+    <task id="LOCAL-00019" summary="release v1.0.9">
+      <option name="closed" value="true" />
+      <created>1736373689847</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1736373689847</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Update manifest to install greyscale and missing 128x128 icons">
+      <option name="closed" value="true" />
+      <created>1736408934477</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1736408934477</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +495,11 @@
     <MESSAGE value="debug issues with flatpak build" />
     <MESSAGE value="Updates" />
     <MESSAGE value="Update generated-sources.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update generated-sources.json" />
+    <MESSAGE value="[Feature request] Graysale tray icon #35" />
+    <MESSAGE value="Update release v1.0.9" />
+    <MESSAGE value="release v1.0.9" />
+    <MESSAGE value="Update manifest to install greyscale and missing 128x128 icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update manifest to install greyscale and missing 128x128 icons" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

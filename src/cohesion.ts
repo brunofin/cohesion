@@ -3,7 +3,9 @@ import path from "path";
 import ChromeVersionFix from "./fix/chrome-version-fix";
 import Electron21Fix from "./fix/electron-21-fix";
 import HotkeyModule from "./module/hotkey-module";
+import MenuModule from "./module/menu-module";
 import ModuleManager from "./module/module-manager";
+import SpellCheckModule from "./module/spellcheck-module";
 import TrayModule from "./module/tray-module";
 import WindowSettingsModule from "./module/window-settings-module";
 
@@ -58,7 +60,7 @@ export default class Cohesion {
             webPreferences: {
                 preload: path.join(__dirname, 'notionPreload.js'),
                 contextIsolation: false,
-                spellcheck: !process.argv.includes("--disable-spellcheck"),
+                spellcheck: true,
             }
         });
 
@@ -175,9 +177,12 @@ export default class Cohesion {
 
         this.window.on('resize', () => this.updateTabBarVisibility());
 
+        const spellcheckModule = new SpellCheckModule();
         this.moduleManager = new ModuleManager([
             new Electron21Fix(),
             new HotkeyModule(this, this.window),
+            spellcheckModule,
+            new MenuModule(this, this.window, spellcheckModule),
             new TrayModule(this, this.window),
             new WindowSettingsModule(this, this.window),
             new ChromeVersionFix(this)
@@ -196,7 +201,6 @@ export default class Cohesion {
     public init(preloadUrl?: string): BrowserWindow {
         this.moduleManager.beforeLoad();
 
-        this.window.setMenu(null);
         this.registerListeners();
 
         this.setupTabs();
