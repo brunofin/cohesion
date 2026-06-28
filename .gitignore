@@ -11,6 +11,7 @@ browser-extension/chrome/chrome.zip
 browser-extension/firefox/firefox.zip
 
 .flatpak-builder
+flatpak-builder-state
 repo
 
 # Ignore Windows specific files

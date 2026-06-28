@@ -3,8 +3,11 @@ import path from "path";
 import ChromeVersionFix from "./fix/chrome-version-fix";
 import Electron21Fix from "./fix/electron-21-fix";
 import HotkeyModule from "./module/hotkey-module";
+import MenuModule from "./module/menu-module";
 import ModuleManager from "./module/module-manager";
+import SpellCheckModule from "./module/spellcheck-module";
 import TrayModule from "./module/tray-module";
+import WhatsNewModule from "./module/whatsnew-module";
 import WindowSettingsModule from "./module/window-settings-module";
 
 const USER_AGENT = `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${process.versions.chrome.split('.')[0]}.0.0.0 Safari/537.36`;
@@ -58,7 +61,7 @@ export default class Cohesion {
             webPreferences: {
                 preload: path.join(__dirname, 'notionPreload.js'),
                 contextIsolation: false,
-                spellcheck: !process.argv.includes("--disable-spellcheck"),
+                spellcheck: true,
             }
         });
 
@@ -163,21 +166,29 @@ export default class Cohesion {
         this.tabsView.webContents.send('update-tabs');
     }
 
+    private readonly startHidden: boolean;
+
     constructor() {
+        this.startHidden = process.argv.includes("--start-hidden") || app.commandLine.hasSwitch("start-hidden");
         this.window = new BrowserWindow({
             title: "Cohesion",
             width: 1100,
             height: 700,
             minWidth: 650,
             minHeight: 550,
-            show: !process.argv.includes("--start-hidden"),
+            show: false,
         });
 
         this.window.on('resize', () => this.updateTabBarVisibility());
 
+        const spellcheckModule = new SpellCheckModule();
+        const whatsnewModule = new WhatsNewModule(this.window);
         this.moduleManager = new ModuleManager([
             new Electron21Fix(),
             new HotkeyModule(this, this.window),
+            spellcheckModule,
+            whatsnewModule,
+            new MenuModule(this, this.window, spellcheckModule, whatsnewModule),
             new TrayModule(this, this.window),
             new WindowSettingsModule(this, this.window),
             new ChromeVersionFix(this)
@@ -196,13 +207,16 @@ export default class Cohesion {
     public init(preloadUrl?: string): BrowserWindow {
         this.moduleManager.beforeLoad();
 
-        this.window.setMenu(null);
         this.registerListeners();
 
         this.setupTabs();
         this.openTab(preloadUrl ?? 'https://notion.so/login');
 
         this.moduleManager.onLoad();
+
+        if (!this.startHidden) {
+            this.window.show();
+        }
 
         return this.window;
     }

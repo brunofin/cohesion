@@ -3,11 +3,22 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d6397d41-1b50-4f78-b679-33258cd9ff4d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/flatpak/flathub-manifest" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flathub-manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/io.github.brunofin.Cohesion.appdata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/io.github.brunofin.Cohesion.appdata.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cohesion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/cohesion.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module/menu-module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/menu-module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +30,15 @@
       <option value="directory" />
       <option value="repository" />
     </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/home/verde/repos/brunofin/notion-desktop-linux" value="2nD6LSirX3YoK9OUiiSDu30QEsb" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="106041" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -84,12 +104,76 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tsconfig.json" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000016606171545" />
+      <entry key="S2" value="1.0710092134970661" />
+      <entry key="S5" value="1.696448687419959" />
+      <entry key="S10" value="3.016879681688548" />
+      <entry key="S30" value="8.267992052632879" />
+      <entry key="S60" value="12.41454705193347" />
+      <entry key="M2" value="15.621279664692645" />
+      <entry key="M5" value="18.08073737440397" />
+      <entry key="M10" value="19.009753769227743" />
+      <entry key="M15" value="19.33282002288691" />
+      <entry key="M30" value="19.662847318808826" />
+      <entry key="H1" value="19.830522555317287" />
+      <entry key="H2" value="19.915034683616522" />
+      <entry key="H4" value="19.957460527651957" />
+      <entry key="D1" value="19.992902182985784" />
+      <entry key="W1" value="19.998985832365907" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.7371346086455506" />
+      <entry key="MS500" value="0.9408277359239441" />
+      <entry key="S2" value="1.0531465157159987" />
+      <entry key="S5" value="1.673802584982653" />
+      <entry key="S10" value="2.9917431304615945" />
+      <entry key="S30" value="8.248531209520202" />
+      <entry key="S60" value="12.401184064779331" />
+      <entry key="M2" value="15.613251918025481" />
+      <entry key="M5" value="18.0771206781286" />
+      <entry key="M10" value="19.007869415411157" />
+      <entry key="M15" value="19.331546209571158" />
+      <entry key="M30" value="19.662201444840765" />
+      <entry key="H1" value="19.830197342363153" />
+      <entry key="H2" value="19.914871503820642" />
+      <entry key="H4" value="19.957378793879837" />
+      <entry key="D1" value="19.99288854066152" />
+      <entry key="W1" value="19.99898388297133" />
+    </decayedShown>
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
@@ -98,30 +182,67 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2nD6LSirX3YoK9OUiiSDu30QEsb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-opus-4.5" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.flatpak:build.executor": "Run",
-    "npm.flatpak:generate-sources.executor": "Run",
-    "npm.flatpak:lint.executor": "Run",
-    "npm.preflatpak:generate-sources.executor": "Run",
-    "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/home/verde/.local/share/JetBrains/Toolbox/apps/rider/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/verde/lab/Notion/resources/output-folder&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.flatpak:build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.flatpak:generate-sources.executor&quot;: &quot;Run&quot;,
+    &quot;npm.flatpak:lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.preflatpak:generate-sources.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/verde/repos/brunofin/notion-desktop-linux/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RunManager" selected="npm.start">
     <configuration name="flatpak:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -143,21 +264,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="flatpak:lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="flatpak:lint" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="preflatpak:generate-sources" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="preflatpak:generate-sources" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$USER_HOME$/lab/Notion/resources/output-folder/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -176,10 +297,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.flatpak:generate-sources" />
         <item itemvalue="npm.preflatpak:generate-sources" />
         <item itemvalue="npm.flatpak:build" />
-        <item itemvalue="npm.flatpak:lint" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +318,17 @@
       <workItem from="1729705980743" duration="3861000" />
       <workItem from="1729710767683" duration="246000" />
       <workItem from="1729711035463" duration="2982000" />
-      <workItem from="1736368535967" duration="259000" />
+      <workItem from="1736368535967" duration="5359000" />
+      <workItem from="1736408586939" duration="2245000" />
+      <workItem from="1736977204761" duration="1595000" />
+      <workItem from="1737043326800" duration="3220000" />
+      <workItem from="1737147491131" duration="5515000" />
+      <workItem from="1782331437509" duration="11000" />
+      <workItem from="1782387780303" duration="3476000" />
+      <workItem from="1782520999526" duration="462000" />
+      <workItem from="1782523648192" duration="13000" />
+      <workItem from="1782523682292" duration="1768000" />
+      <workItem from="1782606299147" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <option name="closed" value="true" />
@@ -327,7 +458,39 @@
       <option name="project" value="LOCAL" />
       <updated>1729714793941</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="[Feature request] Graysale tray icon #35">
+      <option name="closed" value="true" />
+      <created>1736372900554</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1736372900554</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update release v1.0.9">
+      <option name="closed" value="true" />
+      <created>1736373318506</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1736373318506</updated>
+    </task>
+    <task id="LOCAL-00019" summary="release v1.0.9">
+      <option name="closed" value="true" />
+      <created>1736373689847</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1736373689847</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Update manifest to install greyscale and missing 128x128 icons">
+      <option name="closed" value="true" />
+      <created>1736408934477</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1736408934477</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +602,11 @@
     <MESSAGE value="debug issues with flatpak build" />
     <MESSAGE value="Updates" />
     <MESSAGE value="Update generated-sources.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update generated-sources.json" />
+    <MESSAGE value="[Feature request] Graysale tray icon #35" />
+    <MESSAGE value="Update release v1.0.9" />
+    <MESSAGE value="release v1.0.9" />
+    <MESSAGE value="Update manifest to install greyscale and missing 128x128 icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update manifest to install greyscale and missing 128x128 icons" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

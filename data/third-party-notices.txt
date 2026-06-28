@@ -1,0 +1,38 @@
+Third-Party Notices
+===================
+Cohesion (https://github.com/brunofin/cohesion)
+Copyright (c) 2024 Bruno Finger
+Licensed under the MIT License (see LICENSE file included with this application).
+
+Cohesion bundles or depends on the following open-source libraries:
+
+---
+
+Electron (MIT License)
+Copyright (c) Electron contributors
+https://github.com/electron/electron
+https://github.com/electron/electron/blob/main/LICENSE
+
+electron-store (BSD-2-Clause)
+Copyright (c) Sindre Sorhus (https://sindresorhus.com)
+https://github.com/sindresorhus/electron-store
+https://github.com/sindresorhus/electron-store/blob/main/license
+
+electron-builder (MIT License) — build-time only
+Copyright (c) 2015 Loopline Systems
+https://github.com/electron-userland/electron-builder
+https://github.com/electron-userland/electron-builder/blob/master/LICENSE
+
+TypeScript (Apache License 2.0) — build-time only
+Copyright (c) Microsoft Corporation
+https://github.com/microsoft/TypeScript
+https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt
+
+---
+
+This product includes software developed by the Electron community,
+Sindre Sorhus, and other contributors.
+
+For a complete list of all transitive dependencies and their licenses,
+refer to the package-lock.json file or visit the project repository at:
+https://github.com/brunofin/cohesion
