@@ -7,6 +7,7 @@ import MenuModule from "./module/menu-module";
 import ModuleManager from "./module/module-manager";
 import SpellCheckModule from "./module/spellcheck-module";
 import TrayModule from "./module/tray-module";
+import WhatsNewModule from "./module/whatsnew-module";
 import WindowSettingsModule from "./module/window-settings-module";
 
 const USER_AGENT = `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${process.versions.chrome.split('.')[0]}.0.0.0 Safari/537.36`;
@@ -181,11 +182,13 @@ export default class Cohesion {
         this.window.on('resize', () => this.updateTabBarVisibility());
 
         const spellcheckModule = new SpellCheckModule();
+        const whatsnewModule = new WhatsNewModule(this.window);
         this.moduleManager = new ModuleManager([
             new Electron21Fix(),
             new HotkeyModule(this, this.window),
             spellcheckModule,
-            new MenuModule(this, this.window, spellcheckModule),
+            whatsnewModule,
+            new MenuModule(this, this.window, spellcheckModule, whatsnewModule),
             new TrayModule(this, this.window),
             new WindowSettingsModule(this, this.window),
             new ChromeVersionFix(this)

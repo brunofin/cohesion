@@ -36,6 +36,13 @@
   </screenshots>
 
   <releases>
+    <release version="1.1" date="2026-06-26">
+      <description>
+        <p>#44 --start-hidden won't work</p>
+        <p>#41 Wayland input method fix</p>
+        <p>#15 support changing spellcheck language / select muliple languages</p>
+      </description>
+    </release>
     <release version="1.0.10" date="2026-06-24">
       <description>
         <p>Update dependencies</p>

@@ -5,6 +5,7 @@ import Cohesion from "../cohesion";
 import Module from "./module";
 import Settings from "../settings";
 import SpellCheckModule from "./spellcheck-module";
+import WhatsNewModule from "./whatsnew-module";
 
 const settings = new Settings("menu");
 
@@ -13,7 +14,8 @@ export default class MenuModule extends Module {
     constructor(
         private readonly cohesion: Cohesion,
         private readonly window: BrowserWindow,
-        private readonly spellcheck: SpellCheckModule
+        private readonly spellcheck: SpellCheckModule,
+        private readonly whatsnew: WhatsNewModule
     ) {
         super();
     }
@@ -109,6 +111,10 @@ export default class MenuModule extends Module {
             {
                 label: "Help",
                 submenu: [
+                    {
+                        label: "What's New",
+                        click: () => this.whatsnew.show()
+                    },
                     {
                         label: "About Cohesion",
                         click: () => app.showAboutPanel()

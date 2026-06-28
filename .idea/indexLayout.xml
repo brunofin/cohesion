@@ -10,6 +10,7 @@
       <Path>browser-extension/dist</Path>
       <Path>builddir</Path>
       <Path>dist</Path>
+      <Path>flatpak-builder-state</Path>
       <Path>flatpak/flatpak-builder-tools</Path>
       <Path>repo</Path>
     </explicitExcludes>
