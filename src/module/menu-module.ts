@@ -21,7 +21,7 @@ export default class MenuModule extends Module {
     }
 
     public override beforeLoad() {
-        const iconBase = app.isPackaged ? process.resourcesPath : app.getAppPath();
+        const iconBase = app.isPackaged ? join(process.resourcesPath, "..") : app.getAppPath();
         app.setAboutPanelOptions({
             applicationName: "Cohesion",
             applicationVersion: app.getVersion(),
@@ -180,7 +180,7 @@ export default class MenuModule extends Module {
     }
 
     private showLicenses() {
-        const base = app.isPackaged ? process.resourcesPath : app.getAppPath();
+        const base = app.isPackaged ? join(process.resourcesPath, "..") : app.getAppPath();
         const licensePath = join(base, "data", "third-party-notices.txt");
         let content: string;
         try {

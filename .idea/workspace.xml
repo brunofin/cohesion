@@ -11,14 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6397d41-1b50-4f78-b679-33258cd9ff4d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/io.github.brunofin.Cohesion.appdata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/io.github.brunofin.Cohesion.appdata.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cohesion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/cohesion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module/menu-module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/module/menu-module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flatpak/flathub-manifest" beforeDir="false" afterPath="$PROJECT_DIR$/flatpak/flathub-manifest" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +31,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="106041" />
+    <option name="cachedIndexableFilesCount" value="79" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -53,7 +47,7 @@
         <entry key="$PROJECT_DIR$/flatpak/flathub-manifest" value="0ed77a5a69aab8de4af0482ef8d353ade26e2e2f" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/flatpak/flathub-manifest" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitToolBoxStore">
@@ -104,7 +98,6 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/verde/repos/brunofin/notion-desktop-linux/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/flatpak/flathub-manifest/generated-sources.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
@@ -118,22 +111,22 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000016606171545" />
-      <entry key="S2" value="1.0710092134970661" />
-      <entry key="S5" value="1.696448687419959" />
-      <entry key="S10" value="3.016879681688548" />
-      <entry key="S30" value="8.267992052632879" />
-      <entry key="S60" value="12.41454705193347" />
-      <entry key="M2" value="15.621279664692645" />
-      <entry key="M5" value="18.08073737440397" />
-      <entry key="M10" value="19.009753769227743" />
-      <entry key="M15" value="19.33282002288691" />
-      <entry key="M30" value="19.662847318808826" />
-      <entry key="H1" value="19.830522555317287" />
-      <entry key="H2" value="19.915034683616522" />
-      <entry key="H4" value="19.957460527651957" />
-      <entry key="D1" value="19.992902182985784" />
-      <entry key="W1" value="19.998985832365907" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000000857358262" />
+      <entry key="S60" value="1.0006501156326297" />
+      <entry key="M2" value="1.0576926674125688" />
+      <entry key="M5" value="2.229644047479563" />
+      <entry key="M10" value="6.185145811252812" />
+      <entry key="M15" value="10.02573585210679" />
+      <entry key="M30" value="17.23237739695596" />
+      <entry key="H1" value="23.000262855319324" />
+      <entry key="H2" value="26.672204616158535" />
+      <entry key="H4" value="28.747047577821007" />
+      <entry key="D1" value="30.611488270148584" />
+      <entry key="W1" value="30.944170623118612" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -155,23 +148,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7371346086455506" />
-      <entry key="MS500" value="0.9408277359239441" />
-      <entry key="S2" value="1.0531465157159987" />
-      <entry key="S5" value="1.673802584982653" />
-      <entry key="S10" value="2.9917431304615945" />
-      <entry key="S30" value="8.248531209520202" />
-      <entry key="S60" value="12.401184064779331" />
-      <entry key="M2" value="15.613251918025481" />
-      <entry key="M5" value="18.0771206781286" />
-      <entry key="M10" value="19.007869415411157" />
-      <entry key="M15" value="19.331546209571158" />
-      <entry key="M30" value="19.662201444840765" />
-      <entry key="H1" value="19.830197342363153" />
-      <entry key="H2" value="19.914871503820642" />
-      <entry key="H4" value="19.957378793879837" />
-      <entry key="D1" value="19.99288854066152" />
-      <entry key="W1" value="19.99898388297133" />
+      <entry key="MS100" value="0.9460576467255959" />
+      <entry key="MS500" value="0.9889709163809315" />
+      <entry key="S2" value="0.9972312513520695" />
+      <entry key="S5" value="0.9988915792636801" />
+      <entry key="S10" value="0.9994456359721023" />
+      <entry key="S30" value="0.9998152633638159" />
+      <entry key="S60" value="1.0005569505396277" />
+      <entry key="M2" value="1.0576140405791827" />
+      <entry key="M5" value="2.2293685538153527" />
+      <entry key="M10" value="6.184626494149972" />
+      <entry key="M15" value="10.02514917927884" />
+      <entry key="M30" value="17.231861162782767" />
+      <entry key="H1" value="22.999916163371093" />
+      <entry key="H2" value="26.67200316356556" />
+      <entry key="H4" value="28.746938922244905" />
+      <entry key="D1" value="30.61146897437954" />
+      <entry key="W1" value="30.944167836348736" />
     </decayedShown>
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -228,7 +221,7 @@
     &quot;npm.flatpak:lint.executor&quot;: &quot;Run&quot;,
     &quot;npm.preflatpak:generate-sources.executor&quot;: &quot;Run&quot;,
     &quot;npm.start (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Debug&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/verde/repos/brunofin/notion-desktop-linux/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -329,6 +322,7 @@
       <workItem from="1782523648192" duration="13000" />
       <workItem from="1782523682292" duration="1768000" />
       <workItem from="1782606299147" duration="17000" />
+      <workItem from="1782606342023" duration="4086000" />
     </task>
     <task id="LOCAL-00001" summary="Update dependencies">
       <option name="closed" value="true" />
@@ -490,7 +484,31 @@
       <option name="project" value="LOCAL" />
       <updated>1736408934477</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add &quot;What's New&quot; feature to display release notes and update version to 1.1">
+      <option name="closed" value="true" />
+      <created>1782608529321</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1782608529321</updated>
+    </task>
+    <task id="LOCAL-00022" summary="release v1.1 for Cohesion app">
+      <option name="closed" value="true" />
+      <created>1782609194276</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1782609194276</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Bump version to 1.1.0 in configuration files">
+      <option name="closed" value="true" />
+      <created>1782609982541</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1782609982541</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +624,10 @@
     <MESSAGE value="Update release v1.0.9" />
     <MESSAGE value="release v1.0.9" />
     <MESSAGE value="Update manifest to install greyscale and missing 128x128 icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update manifest to install greyscale and missing 128x128 icons" />
+    <MESSAGE value="Add &quot;What's New&quot; feature to display release notes and update version to 1.1" />
+    <MESSAGE value="release v1.1 for Cohesion app" />
+    <MESSAGE value="Bump version to 1.1.0 in configuration files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bump version to 1.1.0 in configuration files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
