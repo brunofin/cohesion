@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from "electron";
+import { app, BrowserWindow, WebContentsView, ipcMain } from "electron";
 import { readFileSync } from "fs";
 import { join } from "path";
 import Module from "./module";
@@ -14,7 +14,8 @@ interface Release {
 
 export default class WhatsNewModule extends Module {
     private releases: Release[] = [];
-    private modal: BrowserWindow | null = null;
+    private overlay: WebContentsView | null = null;
+    private readonly resizeOverlay = () => this.fitOverlay();
 
     constructor(
         private readonly window: BrowserWindow
@@ -26,15 +27,12 @@ export default class WhatsNewModule extends Module {
     public override beforeLoad() {
         ipcMain.on('whatsnew-dismiss', () => {
             this.markSeen(app.getVersion());
-            if (this.modal) {
-                this.modal.close();
-                this.modal = null;
-            }
+            this.close();
         });
     }
 
     private parseReleases() {
-        const base = app.isPackaged ? process.resourcesPath : app.getAppPath();
+        const base = app.isPackaged ? join(process.resourcesPath, "..") : app.getAppPath();
         const appdataPath = join(base, "data", "io.github.brunofin.Cohesion.appdata.xml");
         let content: string;
         try {
@@ -65,37 +63,31 @@ export default class WhatsNewModule extends Module {
     }
 
     public show() {
-        if (this.modal) {
-            this.modal.focus();
+        if (this.overlay) {
             return;
         }
 
         const release = this.getCurrentRelease();
         if (!release) return;
 
-        this.modal = new BrowserWindow({
-            width: 520,
-            height: 420,
-            parent: this.window,
-            modal: true,
-            resizable: true,
-            title: `What's New in Cohesion ${release.version}`,
-            autoHideMenuBar: true,
+        this.overlay = new WebContentsView({
             webPreferences: {
                 preload: join(__dirname, '..', 'whatsnewPreload.js'),
                 contextIsolation: true,
                 nodeIntegration: false,
+                transparent: true,
             }
         });
+        this.overlay.setBackgroundColor('#00000000');
 
-        this.modal.loadFile(join(__dirname, '..', 'whatsnew.html'));
+        this.overlay.webContents.loadFile(join(__dirname, '..', 'whatsnew.html'));
 
         const allReleases = [...this.releases].sort(
             (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
         );
 
-        this.modal.webContents.on('did-finish-load', () => {
-            this.modal?.webContents.send('release-data', {
+        this.overlay.webContents.on('did-finish-load', () => {
+            this.overlay?.webContents.send('release-data', {
                 version: release.version,
                 date: release.date,
                 items: release.items,
@@ -103,9 +95,22 @@ export default class WhatsNewModule extends Module {
             });
         });
 
-        this.modal.on('closed', () => {
-            this.modal = null;
-        });
+        this.window.contentView.addChildView(this.overlay);
+        this.fitOverlay();
+        this.window.on('resize', this.resizeOverlay);
+    }
+
+    private fitOverlay() {
+        if (!this.overlay) return;
+        const { width, height } = this.window.getContentBounds();
+        this.overlay.setBounds({ x: 0, y: 0, width, height });
+    }
+
+    private close() {
+        if (!this.overlay) return;
+        this.window.off('resize', this.resizeOverlay);
+        this.window.contentView.removeChildView(this.overlay);
+        this.overlay = null;
     }
 
     public override onLoad() {

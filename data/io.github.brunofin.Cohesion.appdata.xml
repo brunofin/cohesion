@@ -36,6 +36,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.1.1" date="2026-07-10">
+      <description>
+        <p>Alt now toggles the menu bar (owns autoHideMenuBar so it stays revealed)</p>
+        <p>What's New is an in-window modal overlay, not a separate window</p>
+        <p>Fixed the packaged data/ path bug (was breaking What's New, About icon, and Licenses in Flatpak)</p>
+        <p>Confetti 🎊</p>
+      </description>
+    </release>
     <release version="1.1.0" date="2026-06-26">
       <description>
         <p>#44 --start-hidden won't work</p>

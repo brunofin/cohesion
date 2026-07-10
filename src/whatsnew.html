@@ -8,14 +8,34 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html, body {
+            height: 100vh;
+            background: transparent;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #fff;
             color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+            width: min(520px, calc(100vw - 40px));
+            max-height: min(460px, calc(100vh - 40px));
             padding: 28px 28px 0;
             display: flex;
             flex-direction: column;
-            height: 100vh;
         }
         h1 {
             font-size: 20px;
@@ -95,10 +115,33 @@
             padding: 7px 14px;
         }
 
+        #confetti {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 10;
+        }
+        .confetti-piece {
+            position: absolute;
+            top: -12px;
+            width: 8px;
+            height: 14px;
+            opacity: 0;
+            will-change: transform, opacity;
+            animation: confetti-fall linear forwards;
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(-12px) rotateZ(0deg); opacity: 1; }
+            100% { transform: translateY(102vh) rotateZ(720deg); opacity: 1; }
+        }
+
         @media (prefers-color-scheme: dark) {
             body {
-                background: #1e1e1e;
                 color: #ccc;
+            }
+            .card {
+                background: #1e1e1e;
             }
             h1 {
                 color: #e0e0e0;
@@ -130,19 +173,24 @@
     </style>
 </head>
 <body>
-    <h1 id="title">What's New</h1>
-    <div class="date" id="date"></div>
-    <div class="content">
-        <div id="single-view">
-            <ul id="items"></ul>
+    <div id="confetti"></div>
+    <div class="backdrop" id="backdrop">
+        <div class="card">
+            <h1 id="title">What's New</h1>
+            <div class="date" id="date"></div>
+            <div class="content">
+                <div id="single-view">
+                    <ul id="items"></ul>
+                </div>
+                <div id="all-view" style="display:none"></div>
+            </div>
+            <div class="footer">
+                <div>
+                    <button id="seeAllBtn" class="btn-see-all" style="display:none">See all release notes</button>
+                </div>
+                <button id="closeBtn">Got it</button>
+            </div>
         </div>
-        <div id="all-view" style="display:none"></div>
-    </div>
-    <div class="footer">
-        <div>
-            <button id="seeAllBtn" class="btn-see-all" style="display:none">See all release notes</button>
-        </div>
-        <button id="closeBtn">Got it</button>
     </div>
     <script>
         let allData = null;
@@ -224,6 +272,32 @@
         document.getElementById('closeBtn').addEventListener('click', () => {
             window.whatsnewAPI.dismiss();
         });
+
+        document.getElementById('backdrop').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) window.whatsnewAPI.dismiss();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') window.whatsnewAPI.dismiss();
+        });
+
+        // ponytail: DOM confetti, no library. ~90 pieces, self-cleaning.
+        (function confetti() {
+            const colors = ['#ff5b5b', '#ffd93d', '#6bcB77', '#4d96ff', '#c77dff', '#ff9f45'];
+            const box = document.getElementById('confetti');
+            for (let i = 0; i < 90; i++) {
+                const p = document.createElement('div');
+                p.className = 'confetti-piece';
+                const dur = 2.5 + Math.random() * 2.5;
+                p.style.left = Math.random() * 100 + 'vw';
+                p.style.background = colors[i % colors.length];
+                p.style.animationDuration = dur + 's';
+                p.style.animationDelay = Math.random() * 1.2 + 's';
+                if (Math.random() < 0.5) p.style.borderRadius = '50%';
+                box.appendChild(p);
+                setTimeout(() => p.remove(), (dur + 1.2) * 1000);
+            }
+        })();
     </script>
 </body>
 </html>

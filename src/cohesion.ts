@@ -9,6 +9,7 @@ import SpellCheckModule from "./module/spellcheck-module";
 import TrayModule from "./module/tray-module";
 import WhatsNewModule from "./module/whatsnew-module";
 import WindowSettingsModule from "./module/window-settings-module";
+import Settings from "./settings";
 
 const USER_AGENT = `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${process.versions.chrome.split('.')[0]}.0.0.0 Safari/537.36`;
 
@@ -21,6 +22,9 @@ export default class Cohesion {
     private readonly tabs: Array<WebContentsView>;
     private currentTab: WebContentsView | null = null;
     private activeTab: number = 0;
+    private altArmed = false;
+    private menuRevealed = false;
+    private readonly menuSettings = new Settings("menu");
     public quitting = false;
     public onTitleUpdate?: (title: string, explicitSet: boolean) => void;
 
@@ -86,6 +90,22 @@ export default class Cohesion {
 
         newContent.webContents.on('before-input-event', (event, input) => {
             const key = input.key.toUpperCase();
+
+            // ponytail: Alt-tap toggles the menu bar. autoHideMenuBar hides it the instant the
+            // WebContentsView regains focus, so we flip autoHideMenuBar off to keep it revealed.
+            if (key === 'ALT' && !input.control && !input.shift && !input.meta && !this.menuSettings.get("alwaysShow", false)) {
+                if (input.type === 'keyDown') {
+                    this.altArmed = true;
+                    return;
+                } else if (input.type === 'keyUp' && this.altArmed) {
+                    this.menuRevealed = !this.menuRevealed;
+                    this.window.autoHideMenuBar = !this.menuRevealed;
+                    this.window.setMenuBarVisibility(this.menuRevealed);
+                    this.altArmed = false;
+                    return;
+                }
+            }
+            if (input.type === 'keyDown') this.altArmed = false;
 
             if (input.control && key === 'W') {
                 this.window.hide();
