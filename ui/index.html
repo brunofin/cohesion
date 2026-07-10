@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tabs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            background-color: #191919;
+            font-size: 13px;
+            overflow: hidden;
+            height: 100vh;
+        }
+        #tab-bar {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 6px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        #tab-bar::-webkit-scrollbar { display: none; }
+        .tab {
+            display: flex;
+            align-items: center;
+            padding: 4px 6px;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-right: 2px;
+            min-width: 0;
+            max-width: 200px;
+            color: #9b9b9b;
+            user-select: none;
+            flex-shrink: 1;
+            height: 32px;
+        }
+        .tab:hover { background-color: #2a2a2a; }
+        .tab.active { background-color: #3a3a3a; color: #ffffff; }
+        .tab-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-right: 4px;
+            flex: 1;
+            font-size: 12px;
+        }
+        .tab-close {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            flex-shrink: 0;
+            font-size: 14px;
+            color: #9b9b9b;
+        }
+        .tab-close:hover { background-color: #555; color: #fff; }
+    </style>
+</head>
+<body>
+<div id="tab-bar"></div>
+<script>
+  const { invoke } = window.__TAURI__.core;
+  const { listen } = window.__TAURI__.event;
+  const tabBar = document.getElementById('tab-bar');
+
+  async function renderTabs() {
+    const tabs = await invoke('get_tabs');
+    tabBar.innerHTML = '';
+
+    tabs.forEach((tab) => {
+      const tabEl = document.createElement('div');
+      tabEl.className = 'tab' + (tab.active ? ' active' : '');
+
+      const title = document.createElement('span');
+      title.className = 'tab-title';
+      title.textContent = tab.title || 'New Tab';
+      tabEl.appendChild(title);
+
+      const close = document.createElement('span');
+      close.className = 'tab-close';
+      close.textContent = '\u00D7';
+      close.addEventListener('click', (e) => {
+        e.stopPropagation();
+        invoke('close_tab', { index: tab.index });
+      });
+      tabEl.appendChild(close);
+
+      tabEl.addEventListener('click', () => invoke('switch_tab', { index: tab.index }));
+      tabBar.appendChild(tabEl);
+    });
+  }
+
+  listen('update-tabs', renderTabs);
+  renderTabs();
+</script>
+</body>
+</html>

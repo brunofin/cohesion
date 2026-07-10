@@ -49,3 +49,6 @@ atlassian-ide-plugin.xml
 # Azure Toolkit for IntelliJ plugin
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
+
+# Tauri
+src-tauri/target/

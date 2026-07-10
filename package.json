@@ -20,9 +20,11 @@
   "author": "Bruno Finger <bruno.k.finger@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@tauri-apps/api": "^2.11.1",
     "electron-store": "11.0.2"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^2.11.4",
     "electron": "42.5.0",
     "electron-builder": "26.15.3",
     "typescript": "6.0.3"

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100vh;
+            background: transparent;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+            width: min(520px, calc(100vw - 40px));
+            max-height: min(460px, calc(100vh - 40px));
+            padding: 28px 28px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1a1a1a;
+        }
+        .date {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        .content {
+            flex: 1;
+            overflow-y: auto;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 9px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        .release-group {
+            margin-bottom: 20px;
+        }
+        .release-group:last-child {
+            margin-bottom: 0;
+        }
+        .release-version {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 2px;
+        }
+        .release-date {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+        .release-group ul li {
+            font-size: 13px;
+            padding: 6px 0;
+        }
+        .empty {
+            color: #888;
+            font-style: italic;
+        }
+        .footer {
+            padding: 14px 0;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+        button {
+            padding: 7px 22px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f8f8f8;
+            cursor: pointer;
+            font-size: 13px;
+            color: #333;
+        }
+        button:hover {
+            background: #eaeaea;
+        }
+        .btn-see-all {
+            font-size: 12px;
+            padding: 7px 14px;
+        }
+
+        #confetti {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 10;
+        }
+        .confetti-piece {
+            position: absolute;
+            top: -12px;
+            width: 8px;
+            height: 14px;
+            opacity: 0;
+            will-change: transform, opacity;
+            animation: confetti-fall linear forwards;
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(-12px) rotateZ(0deg); opacity: 1; }
+            100% { transform: translateY(102vh) rotateZ(720deg); opacity: 1; }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #ccc;
+            }
+            .card {
+                background: #1e1e1e;
+            }
+            h1 {
+                color: #e0e0e0;
+            }
+            .date {
+                color: #999;
+            }
+            li {
+                border-bottom-color: #333;
+            }
+            .release-version {
+                color: #e0e0e0;
+            }
+            .footer {
+                border-top-color: #333;
+            }
+            button {
+                background: #2a2a2a;
+                border-color: #444;
+                color: #ccc;
+            }
+            button:hover {
+                background: #3a3a3a;
+            }
+            .empty {
+                color: #999;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="confetti"></div>
+    <div class="backdrop" id="backdrop">
+        <div class="card">
+            <h1 id="title">What's New</h1>
+            <div class="date" id="date"></div>
+            <div class="content">
+                <div id="single-view">
+                    <ul id="items"></ul>
+                </div>
+                <div id="all-view" style="display:none"></div>
+            </div>
+            <div class="footer">
+                <div>
+                    <button id="seeAllBtn" class="btn-see-all" style="display:none">See all release notes</button>
+                </div>
+                <button id="closeBtn">Got it</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const invoke = window.__TAURI__.core.invoke;
+        let allData = null;
+
+        function formatDate(dateStr) {
+            return new Date(dateStr).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'});
+        }
+
+        function renderSingle(data) {
+            document.getElementById('title').textContent = 'What\u2019s New in Cohesion ' + data.version;
+            document.getElementById('date').textContent = formatDate(data.date);
+            document.getElementById('date').style.display = '';
+            document.getElementById('single-view').style.display = '';
+            document.getElementById('all-view').style.display = 'none';
+
+            const list = document.getElementById('items');
+            list.innerHTML = '';
+            if (data.items.length === 0) {
+                list.innerHTML = '<li class="empty">No release notes available.</li>';
+            } else {
+                data.items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    list.appendChild(li);
+                });
+            }
+
+            document.getElementById('seeAllBtn').style.display = data.allReleases.length > 1 ? '' : 'none';
+        }
+
+        function renderAll(releases) {
+            document.getElementById('title').textContent = 'Release Notes';
+            document.getElementById('date').style.display = 'none';
+            document.getElementById('single-view').style.display = 'none';
+            document.getElementById('all-view').style.display = '';
+            document.getElementById('seeAllBtn').style.display = 'none';
+
+            const container = document.getElementById('all-view');
+            container.innerHTML = '';
+
+            releases.forEach(r => {
+                const group = document.createElement('div');
+                group.className = 'release-group';
+
+                const version = document.createElement('div');
+                version.className = 'release-version';
+                version.textContent = 'v' + r.version;
+                group.appendChild(version);
+
+                const date = document.createElement('div');
+                date.className = 'release-date';
+                date.textContent = formatDate(r.date);
+                group.appendChild(date);
+
+                const list = document.createElement('ul');
+                if (r.items.length === 0) {
+                    list.innerHTML = '<li class="empty">No release notes available.</li>';
+                } else {
+                    r.items.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        list.appendChild(li);
+                    });
+                }
+                group.appendChild(list);
+                container.appendChild(group);
+            });
+        }
+
+        function dismiss() {
+            invoke('whatsnew_dismiss');
+        }
+
+        invoke('get_release_data').then((data) => {
+            if (!data) { dismiss(); return; }
+            allData = data;
+            renderSingle(data);
+        });
+
+        document.getElementById('seeAllBtn').addEventListener('click', () => {
+            if (allData) renderAll(allData.allReleases);
+        });
+
+        document.getElementById('closeBtn').addEventListener('click', dismiss);
+
+        document.getElementById('backdrop').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) dismiss();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') dismiss();
+        });
+
+        // ponytail: DOM confetti, no library. ~90 pieces, self-cleaning.
+        (function confetti() {
+            const colors = ['#ff5b5b', '#ffd93d', '#6bcB77', '#4d96ff', '#c77dff', '#ff9f45'];
+            const box = document.getElementById('confetti');
+            for (let i = 0; i < 90; i++) {
+                const p = document.createElement('div');
+                p.className = 'confetti-piece';
+                const dur = 2.5 + Math.random() * 2.5;
+                p.style.left = Math.random() * 100 + 'vw';
+                p.style.background = colors[i % colors.length];
+                p.style.animationDuration = dur + 's';
+                p.style.animationDelay = Math.random() * 1.2 + 's';
+                if (Math.random() < 0.5) p.style.borderRadius = '50%';
+                box.appendChild(p);
+                setTimeout(() => p.remove(), (dur + 1.2) * 1000);
+            }
+        })();
+    </script>
+</body>
+</html>
